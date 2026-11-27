@@ -2,12 +2,14 @@
 
 # MVP Brain
 
-**A local-first workspace for notes, docs and databases.**
+**A lead-generation workspace that Claude Code can work in.**
 
-An open-source, self-hosted workspace for teams and individuals, built to work
-hand in hand with Claude Code through its built-in MCP server. Everything is a page: documents, folders and database rows share
-one model. It runs on your machine, it is yours to extend, and it also ships as
-a desktop app that needs nothing else installed.
+Track leads,
+companies, outreach and follow-ups as databases, run the pipeline on a board,
+and let Claude Code find, qualify and update leads for you through the built-in
+MCP server. Everything is a page: documents, folders and database rows share
+one model. It is open source, runs on your machine, and also ships as a desktop
+app that needs nothing else installed.
 
 <!-- The app's repository URL lives in `src/lib/project-info.ts`; keep it in step with these links. -->
 
@@ -49,6 +51,24 @@ a desktop app that needs nothing else installed.
 | [Quick start](#quick-start) — Docker, `.env`, `npm run dev` | [Where to read next](#where-to-read-next) — the full docs set |
 | [Demo](#demo) — the two-minute product film | [Contributing](#contributing) · [Security](#security) |
 | [Screenshots](#screenshots) — the interface at a glance | [Authors](#authors) · [License](#license) |
+
+## Lead generation with Claude Code
+
+MVP Brain's focus is lead generation. Keep a **Leads** database (name, company,
+source, stage, owner, last contacted, next follow-up), view it as a board by
+stage, and connect Claude Code so it can work the pipeline with you:
+
+```bash
+claude mcp add --transport http mvp-brain \
+  "http://127.0.0.1:53021/api/mcp?workspaceId=<workspace-id>&allowWrite=true" \
+  --header "Authorization: Bearer <api-token>"
+```
+
+Create the token under **Workspace settings → API tokens**. Then ask Claude Code
+things like "which leads haven't been contacted in two weeks?", "add these ten
+companies as new leads" or "move everyone who replied to Qualified". The tools
+are listed in [`docs/MCP.md`](./docs/MCP.md). The in-app chat assistant knows
+the workspace is lead-gen focused too.
 
 ## Demo
 
