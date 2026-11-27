@@ -37,8 +37,8 @@
  *   resolves to loopback in a browser, so admitting it there would let a page
  *   talk to whatever is listening on the user's 127.0.0.1.
  * - `frame-src` mirrors exactly the hosts `detectEmbed()`
- *   (`src/lib/embeds.ts`) can emit as an iframe `src` (Noema embeds OTHERS).
- *   Noema is never embedded, hence `frame-ancestors 'none'` + XFO DENY.
+ *   (`src/lib/embeds.ts`) can emit as an iframe `src` (MVP Brain embeds OTHERS).
+ *   MVP Brain is never embedded, hence `frame-ancestors 'none'` + XFO DENY.
  */
 
 /** Header carrying the per-response nonce into the App Router render. */

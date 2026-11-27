@@ -1,4 +1,4 @@
-// Minimal Yjs WebSocket server (y-websocket wire protocol) for Noema.
+// Minimal Yjs WebSocket server (y-websocket wire protocol) for MVP Brain.
 // Usage: node scripts/collab-server.mjs   (env: PORT=1234 HOST=127.0.0.1)
 //
 // One Y.Doc per room (room = page id). Documents are kept in memory and
@@ -965,7 +965,7 @@ function start() {
         ? `origin allow-list: ${origins.length} entr${origins.length === 1 ? "y" : "ies"} (fail closed)`
         : "origin policy: APP_ORIGINS unset (loopback origins only — a networked deployment must set APP_ORIGINS)";
     console.log(
-      `Noema collaboration server listening on ws://${HOST}:${PORT} (auth: session cookie + page/ticket authz; identity: DB-bound; rate: ${MAX_CONNECTIONS_PER_USER} conns/user, ${MESSAGE_LIMIT} msg/${MESSAGE_WINDOW_MS / 1000}s; payload: max ${MAX_PAYLOAD_BYTES} B/msg; ${originNote})`,
+      `MVP Brain collaboration server listening on ws://${HOST}:${PORT} (auth: session cookie + page/ticket authz; identity: DB-bound; rate: ${MAX_CONNECTIONS_PER_USER} conns/user, ${MESSAGE_LIMIT} msg/${MESSAGE_WINDOW_MS / 1000}s; payload: max ${MAX_PAYLOAD_BYTES} B/msg; ${originNote})`,
     );
   });
   wss.on("error", (error) => {

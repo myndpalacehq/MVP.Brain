@@ -30,7 +30,7 @@ import { resolveClipboardFileMime } from "@/lib/clipboard-files";
 /* --------------------------------------------------------------- paste engines */
 
 /**
- * Attributes the Noema paste normaliser understands, mirroring the rich list
+ * Attributes the MVP Brain paste normaliser understands, mirroring the rich list
  * `paste.ts` feeds its own sanitizer. `sanitizePaste` (paste-cleanup) has no
  * per-tag wildcard, so the same list is attached to every structural tag; the
  * allowlist then keeps exactly what `normalizePasteHtml` reads while still
@@ -46,7 +46,7 @@ const NOEMA_PASTE_ATTRS: readonly string[] = [
 ];
 
 /**
- * Structural tags the Noema paste normaliser maps to block nodes: the
+ * Structural tags the MVP Brain paste normaliser maps to block nodes: the
  * sanitizer's defaults plus the wrappers/atoms `normalizePasteHtml` reads
  * (callout/toggle/columns `div`s, task-list `input`s, inline `span`/`mark`).
  */
@@ -78,7 +78,7 @@ export type CleanedClipboardHtml = {
  * `sanitizePaste`'s tag/attribute/URL allowlist.
  *
  * Only Word's clipboard triggers the inline-style strip: it is the one source
- * whose noise is both heavy and unambiguous. Noema's *own* copies carry
+ * whose noise is both heavy and unambiguous. MVP Brain's *own* copies carry
  * `data-block-id`, which `detectSource` fingerprints as Notion — stripping
  * every non-generic source would therefore erase real text colour on an
  * internal copy/paste, so GDocs/Notion keep their (now class/attr-limited)

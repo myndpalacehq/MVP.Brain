@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1.7
 # =============================================================================
-# Noema — production container image.
+# MVP Brain — production container image.
 #
 # This is a *standalone* Next.js build, staged by the project's own packager
 # (`scripts/desktop/prepare.mjs`). Reusing that packager is deliberate: the
@@ -82,7 +82,7 @@ ARG REVISION=unknown
 ARG BUILD_DATE=1970-01-01T00:00:00Z
 # Kept in the runner for the Node-side guards; the Edge copy was baked above.
 ARG TRUSTED_PROXY_HOPS=""
-LABEL org.opencontainers.image.title="Noema" \
+LABEL org.opencontainers.image.title="MVP Brain" \
       org.opencontainers.image.description="Open-source, self-hosted workspace for notes, docs and databases." \
       org.opencontainers.image.url="https://github.com/Guembri01/noema" \
       org.opencontainers.image.source="https://github.com/Guembri01/noema" \

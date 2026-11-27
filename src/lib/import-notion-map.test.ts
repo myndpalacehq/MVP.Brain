@@ -76,7 +76,7 @@ describe("mapNotionBlockType", () => {
     });
   });
 
-  it("returns null for Notion blocks Noema handles elsewhere or has no node for", () => {
+  it("returns null for Notion blocks MVP Brain handles elsewhere or has no node for", () => {
     expect({
       childPage: mapNotionBlockType("child_page"),
       childDatabase: mapNotionBlockType("child_database"),
@@ -111,7 +111,7 @@ describe("mapNotionBlockType", () => {
 });
 
 describe("NOTION_BLOCK_MAP", () => {
-  it("only ever points at Noema block types", () => {
+  it("only ever points at MVP Brain block types", () => {
     const allowed = new Set<string>(NOEMA_BLOCK_TYPES);
     const invalid = Object.values(NOTION_BLOCK_MAP).filter((value) => !allowed.has(value));
     expect(invalid).toEqual([]);

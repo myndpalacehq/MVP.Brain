@@ -198,7 +198,7 @@ export interface CalendarEventInput {
 
 /** Envelope metadata for {@link buildCalendar}. */
 export interface CalendarBuildOptions {
-  /** `PRODID`, e.g. `"-//Noema//Calendar//EN"`. */
+  /** `PRODID`, e.g. `"-//MVP Brain//Calendar//EN"`. */
   prodId: string;
   /** Optional `X-WR-CALNAME` display name. */
   name?: string;

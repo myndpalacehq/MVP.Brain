@@ -2,7 +2,7 @@
 /**
  * Secret gate: no credential may be committed, and no `.env` may be tracked.
  *
- * Why this exists: Noema ships as open source, so whatever is in the tree is
+ * Why this exists: MVP Brain ships as open source, so whatever is in the tree is
  * published as-is. A single `git add .env`, or a live key pasted into a fixture,
  * is permanent and public the moment it lands — git history does not forget.
  * This gate runs over **every tracked file** and fails with the exact

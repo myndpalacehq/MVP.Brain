@@ -1,7 +1,7 @@
 import type { DBProperty, DBRow } from "@/components/database/database-types";
 
 /**
- * Pure Trello board JSON → Noema database shape parser (spec
+ * Pure Trello board JSON → MVP Brain database shape parser (spec
  * `MISSING_FEATURES.md` §12 "Import Trello").
  *
  * Output deliberately reuses the app's own model (`DBProperty` / `DBRow`) and
@@ -76,7 +76,7 @@ const STATUS_COLORS = ["gray", "blue", "green", "yellow", "orange", "purple", "p
 
 const NOEMA_PALETTE_IDS = new Set(STATUS_COLORS.concat("brown"));
 
-/** Trello colour names that need folding onto Noema's palette. */
+/** Trello colour names that need folding onto MVP Brain's palette. */
 const COLOR_ALIASES: Record<string, string> = {
   black: "gray",
   sky: "blue",
@@ -146,7 +146,7 @@ function collectMemberNames(board: RawBoard): Map<string, string> {
 }
 
 /**
- * Parse a Trello board JSON export into Noema's database shape.
+ * Parse a Trello board JSON export into MVP Brain's database shape.
  *
  * Fail-safe: any non-object / list-less input yields an empty result instead of
  * throwing; closed lists and closed cards are skipped; list and label order are

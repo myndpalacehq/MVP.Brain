@@ -197,7 +197,7 @@ async function main() {
     const html = await page.text();
     check(page.status === 200, "GET /login returns 200", `status ${page.status}`);
     check(html.includes("<html") && html.length > 500, "page HTML is real (not an error shell)", `${html.length} bytes`);
-    check(/noema|Noema/i.test(html), "page mentions the product");
+    check(/noema|MVP Brain/i.test(html), "page mentions the product");
 
     const css = await fetch(`http://127.0.0.1:${port}/login`).then((r) => r.text());
     check(/<link[^>]+\.css|styles/i.test(css), "stylesheets are linked (static assets copied)");

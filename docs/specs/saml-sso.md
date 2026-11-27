@@ -32,7 +32,7 @@ already delegates cryptography to `jose` rather than rolling its own JWT code
 
 ## 1. Problem statement
 
-Noema authenticates with email/password (+ TOTP 2FA), and offers **env-configured
+MVP Brain authenticates with email/password (+ TOTP 2FA), and offers **env-configured
 OIDC** SSO (`SSO_*` variables). Enterprise buyers in the product class expect
 **SAML 2.0** against Okta / Azure AD / Google Workspace, with Just-in-Time
 (JIT) provisioning, role mapping from directory groups, verified-domain
@@ -48,7 +48,7 @@ protocol.
 | OIDC SSO (env-level) | `src/app/api/auth/sso/start/route.ts`, `.../callback/route.ts`, `.env.example:30-33` | Discovery via `/.well-known/openid-configuration` (`start:14-21`), state+nonce in httpOnly cookies (`start:38-39`), code exchange + `jose` JWKS verification with issuer/audience/nonce (`callback:42-72`), JIT user create only when the id_token asserts email_verified: true, keyed by lowercased email with sentinel password `sso:<random>` and `emailVerified: true` (`callback:82-87`), then `createSession` (`callback:89`). A sign-in links an existing account only when that account proved its address (`User.emailVerified`); an unverified one is refused with `?error=sso_email_taken` (B07). **Global for the whole deployment; not per-workspace; no role/group mapping** (JIT user lands in no workspace). |
 | Login surface | `src/app/login/page.tsx:26` | Renders a "Sign in with SSO" link only when `process.env.SSO_ISSUER` is set. |
 | Settings UI | `src/app/w/[slug]/settings/page.tsx` | Single scrolling settings page of sections (General, Members, Activity, 2FA, API tokens, OAuth apps, Webhooks, AI, Labels, Email, Teamspaces); admin gate `canManageMembers` (`:62,164`). **No SSO section** — SSO config exists only as env. |
-| OAuth apps | `src/server/actions/oauth-apps.ts`, `OAuthAppManager` on settings page (`:246`) | Third-party OAuth **clients** Noema issues (integrations). Unrelated to SSO; must not be conflated in the UI. |
+| OAuth apps | `src/server/actions/oauth-apps.ts`, `OAuthAppManager` on settings page (`:246`) | Third-party OAuth **clients** MVP Brain issues (integrations). Unrelated to SSO; must not be conflated in the UI. |
 | Roles | `src/lib/permissions.ts:28-38`, `prisma/schema.prisma:152-164` | `WorkspaceRole` = OWNER / ADMIN / MEMBER / GUEST on `WorkspaceMember`; workspace owner auto-OWNER (`permissions.ts:20-24`). |
 | Invites | `prisma/schema.prisma:166-182`, `src/server/actions/email.ts` | Email invites with role + expiry; the model SAML JIT must complement, not bypass (an invited email wins over domain rules). |
 | Mock IdP harness | `scripts/check-sso-teamspaces.mjs:13-87` | In-process OIDC mock IdP on `:4321` (discovery, `/authorize`, `/token`, `/jwks`, RS256 `id_token` with `email`/`name`/`nonce` claims, `:67-79`); full flow asserted end-to-end including negative state test (`:119-120`) and JIT user cleanup (`:159`). `npm run check:sso` (`package.json:15`). |

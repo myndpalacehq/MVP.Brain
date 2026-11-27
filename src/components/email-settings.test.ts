@@ -148,7 +148,7 @@ describe("EmailForm (renderToStaticMarkup)", () => {
     encryption: "starttls",
     username: "mailer",
     password: "",
-    fromName: "Noema",
+    fromName: "MVP Brain",
     fromEmail: "noema@example.com",
     replyTo: "",
   };

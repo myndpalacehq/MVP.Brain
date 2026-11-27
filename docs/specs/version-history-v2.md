@@ -11,7 +11,7 @@
 
 ## 1. Problem statement
 
-Noema already ships a working **v1** version history: every content/title save
+MVP Brain already ships a working **v1** version history: every content/title save
 snapshots the *previous* page state into a `PageVersion` row, a slide-over
 panel lists them with author/time/char-delta, and any row can be restored in
 one click. The matrix still marks all nine section-10 rows 🧭 because what
@@ -495,7 +495,7 @@ dev :3201 — none require a new server or the collab process.
 **Open questions**
 
 - **O30.1** — Retention/trash defaults vs. matrix `:683` "Version-history
-  retention by plan": Noema is self-hosted, so "plan" ≈ deployment config.
+  retention by plan": MVP Brain is self-hosted, so "plan" ≈ deployment config.
   Env vars now (this spec); workspace-admin UI and plan tiers deferred until a
   pricing row is actually built. Coordinate `TRASH_RETENTION_DAYS` with the
   section-9 row `:434` owner so two envs don't drift.

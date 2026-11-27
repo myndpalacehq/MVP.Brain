@@ -12,7 +12,7 @@
 
 ## 1. Problem statement
 
-Noema can *write* `Notification` rows and *read* them back in an inbox, but the
+MVP Brain can *write* `Notification` rows and *read* them back in an inbox, but the
 system in between — who gets notified, under which preferences, on which
 channel, and how the user hears about it — does not exist:
 

@@ -12,10 +12,10 @@
  */
 
 /** Display name, matching `package.json` and `tauri.conf.json`. */
-export const PROJECT_NAME = "Noema";
+export const PROJECT_NAME = "MVP Brain";
 
-/** Canonical repository URL — <https://github.com/Guembri01/noema>. */
-export const PROJECT_REPOSITORY = "https://github.com/Guembri01/noema";
+/** Canonical repository URL — <https://github.com/Temped/mvp-brain>. */
+export const PROJECT_REPOSITORY = "https://github.com/Temped/mvp-brain";
 
 /** Where the long-form documentation lives (see `docs/README.md`). */
 export const PROJECT_DOCS_URL = `${PROJECT_REPOSITORY}/tree/main/docs`;
@@ -24,7 +24,7 @@ export const PROJECT_DOCS_URL = `${PROJECT_REPOSITORY}/tree/main/docs`;
 export const PROJECT_LICENCE = "MIT";
 
 /**
- * The people who wrote Noema, in the order `AUTHORS.md` and `LICENSE` use.
+ * The people who wrote MVP Brain, in the order `AUTHORS.md` and `LICENSE` use.
  * Not a contributor list — that lives in the repository, where a pull request
  * can extend it.
  */

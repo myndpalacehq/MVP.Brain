@@ -52,7 +52,7 @@ jobs:
 
 /** The hook as it is in the repository, cut to the parts the rules read. */
 const HOOK = `#!/bin/sh
-# Noema pre-commit hook — an opt-in convenience, NOT the check.
+# MVP Brain pre-commit hook — an opt-in convenience, NOT the check.
 node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/check-commit-dates.mjs --pending || exit 1
 node scripts/check-secrets.mjs || exit 1
 `;

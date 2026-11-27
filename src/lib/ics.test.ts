@@ -12,7 +12,7 @@ import {
 const FEED = [
   "BEGIN:VCALENDAR",
   "VERSION:2.0",
-  "PRODID:-//Noema//Test//EN",
+  "PRODID:-//MVP Brain//Test//EN",
   "BEGIN:VEVENT",
   "UID:evt-1@noema",
   "SUMMARY:Weekly sync",
@@ -185,7 +185,7 @@ const unfold = (value: string) => value.replace(/\r\n /g, "");
 const utf8 = (value: string) => new TextEncoder().encode(value).length;
 
 const NOW = "2026-01-15T12:00:00.000Z";
-const PRODID = "-//Noema//Calendar//EN";
+const PRODID = "-//MVP Brain//Calendar//EN";
 const opts = (extra: Partial<{ name: string; now: string }> = {}) => ({
   prodId: PRODID,
   now: NOW,

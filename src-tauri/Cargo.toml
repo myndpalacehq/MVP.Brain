@@ -1,7 +1,7 @@
 [package]
 name = "noema-desktop"
 version = "1.4.3"
-description = "Noema — local-first workspace, as an installable desktop app"
+description = "MVP Brain — local-first workspace, as an installable desktop app"
 authors = ["Bilel Guembri", "Wissal Ben Othmen"]
 edition = "2021"
 rust-version = "1.85"

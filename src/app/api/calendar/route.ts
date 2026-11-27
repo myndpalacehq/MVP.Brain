@@ -31,7 +31,7 @@ import {
 
 export const runtime = "nodejs";
 
-const CALENDAR_PRODID = "-//Noema//Calendar//EN";
+const CALENDAR_PRODID = "-//MVP Brain//Calendar//EN";
 
 /** Shape of the dated rows returned by {@link getUpcomingEvents}. */
 type UpcomingEvent = Awaited<ReturnType<typeof getUpcomingEvents>>[number];

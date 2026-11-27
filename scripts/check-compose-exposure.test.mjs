@@ -70,14 +70,14 @@ const FIXED_COMPOSE = [
 
 /** The `.env` template as it was before the fix. */
 const VULNERABLE_ENV_EXAMPLE = [
-  "# Noema — local development environment",
+  "# MVP Brain — local development environment",
   'DATABASE_URL="postgresql://noema:noema@localhost:5433/noema?schema=public"',
   "",
 ].join("\n");
 
 /** The `.env` template as it is after the fix. */
 const FIXED_ENV_EXAMPLE = [
-  "# Noema — local development environment",
+  "# MVP Brain — local development environment",
   "POSTGRES_PASSWORD=",
   'DATABASE_URL="postgresql://noema:<POSTGRES_PASSWORD>@localhost:5433/noema?schema=public"',
   "",

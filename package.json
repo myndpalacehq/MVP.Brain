@@ -1,5 +1,5 @@
 {
-  "name": "noema",
+  "name": "mvp-brain",
   "version": "1.4.3",
   "private": true,
   "description": "An original, open-source, self-hosted workspace for notes, docs and databases — and an installable desktop app that needs nothing else installed.",
@@ -13,13 +13,13 @@
       "name": "Wissal Ben Othmen"
     }
   ],
-  "homepage": "https://github.com/Guembri01/noema#readme",
+  "homepage": "https://github.com/Temped/mvp-brain#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Guembri01/noema.git"
+    "url": "git+https://github.com/Temped/mvp-brain.git"
   },
   "bugs": {
-    "url": "https://github.com/Guembri01/noema/issues"
+    "url": "https://github.com/Temped/mvp-brain/issues"
   },
   "keywords": [
     "notion-alternative",

@@ -83,7 +83,7 @@ const CONTEXT_PREVIEW_QUESTION = "Summarise the note above in three bullet point
 
 /** Default sample note used to exercise the context budget. */
 const CONTEXT_PREVIEW_SAMPLE =
-  "Noema keeps every page version, so a note can be restored without losing the discussion around it. " +
+  "MVP Brain keeps every page version, so a note can be restored without losing the discussion around it. " +
   "Mentions resolve to workspace members, and backlinks surface every place a page is referenced.";
 
 /** Default token budget shown in the context-budget preview. */
@@ -688,7 +688,7 @@ export function AiSettings({
           <p className="text-xs text-muted">
             {endpointCheck.ok
               ? endpointLocal
-                ? "Local endpoint: plain http is allowed and the API key is optional. Nothing is sent to a Noema server."
+                ? "Local endpoint: plain http is allowed and the API key is optional. Nothing is sent to an MVP Brain server."
                 : "Remote endpoint: TLS is required and the API key is mandatory."
               : endpointCheck.error}
           </p>
@@ -902,7 +902,7 @@ export function AiSettings({
       >
         <ul className="grid gap-1 text-xs text-muted">
           <li>• Prompts and completions are not written to application logs by default.</li>
-          <li>• Noema adds no training or telemetry forwarding to the AI transport.</li>
+          <li>• MVP Brain adds no training or telemetry forwarding to the AI transport.</li>
           <li>• Keys are encrypted at rest and never returned to the browser.</li>
           <li>• The written policy and its enforcement points live in docs/AI-BOUNDARIES.md.</li>
         </ul>

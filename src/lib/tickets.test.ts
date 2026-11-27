@@ -172,7 +172,7 @@ describe("key generation format", () => {
   it("always emits a well-formed key for any workspace name", () => {
     const names = [
       "Demo Workspace",
-      "Noema",
+      "MVP Brain",
       "4D Space",
       "💥 Studio",
       "   ",

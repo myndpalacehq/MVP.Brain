@@ -294,6 +294,6 @@ describeBackup("restore", () => {
       BACKUP_ENCRYPTION_KEY: SEAL_KEY,
     });
     expect(result.code).toBe(1);
-    expect(result.output).toContain("Not a Noema backup");
+    expect(result.output).toContain("Not an MVP Brain backup");
   });
 });

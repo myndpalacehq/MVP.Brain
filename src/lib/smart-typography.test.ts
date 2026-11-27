@@ -163,8 +163,8 @@ describe("applySmartTypography end-to-end", () => {
     expect(applySmartTypography('"Don\'t" -- she said... (c)')).toBe(
       `${LEFT_DOUBLE}Don${RIGHT_SINGLE}t${RIGHT_DOUBLE} ${EN_DASH} she said${ELLIPSIS} ${COPYRIGHT}`,
     );
-    expect(applySmartTypography("Copyright (c) 2026 Noema (r) (TM)")).toBe(
-      `Copyright ${COPYRIGHT} 2026 Noema ${REGISTERED} ${TRADEMARK}`,
+    expect(applySmartTypography("Copyright (c) 2026 MVP Brain (r) (TM)")).toBe(
+      `Copyright ${COPYRIGHT} 2026 MVP Brain ${REGISTERED} ${TRADEMARK}`,
     );
   });
 

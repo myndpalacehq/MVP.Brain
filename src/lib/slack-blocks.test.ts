@@ -18,7 +18,7 @@ import {
 /**
  * Slack integration — Block Kit payload builder (pure, no network).
  *
- * A Noema event (comment/mention/ticket) turns into a Slack message: escaped
+ * A MVP Brain event (comment/mention/ticket) turns into a Slack message: escaped
  * user text, well-formed blocks, and a strict validator that refuses any
  * payload Slack would reject (bad types, empty text, over-limit blocks).
  */

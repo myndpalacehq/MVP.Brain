@@ -1,4 +1,4 @@
-# Contributing to Noema
+# Contributing to MVP Brain
 
 Thanks for taking the time. This document is deliberately short: setup, the
 gates your change has to pass, and the handful of conventions the codebase

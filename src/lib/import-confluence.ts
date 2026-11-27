@@ -1,5 +1,5 @@
 /**
- * Confluence HTML export → Noema page tree (pure, tolerant, total).
+ * Confluence HTML export → MVP Brain page tree (pure, tolerant, total).
  *
  * The importer half of the "Import Confluence" row (`docs/FEATURE_MATRIX.md`,
  * "Spaces into pages"): it turns a Confluence HTML export into the app's own
@@ -12,7 +12,7 @@
  * HTML exporter uses), and the structural parse is a small, local, DOM-free
  * tokenizer that degrades to text on malformed input instead of throwing.
  *
- * MAPPING (Confluence markup → Noema blocks)
+ * MAPPING (Confluence markup → MVP Brain blocks)
  *   • `h1`–`h6`                 → `heading` (+ `attrs.level`)
  *   • `p` / loose inline runs   → `paragraph`
  *   • `ul` / `ol`               → `bulletList` / `orderedList` (+ `attrs.start`)
@@ -87,7 +87,7 @@ export type ConfluenceImportMeta = {
   images: number;
   links: number;
   pageRefs: number;
-  /** Elements that carried no Noema equivalent (e.g. unknown macros). */
+  /** Elements that carried no MVP Brain equivalent (e.g. unknown macros). */
   skippedElements: number;
   /** Deduped, human-readable loss notes (see `meta.skippedElements`). */
   warnings: string[];
@@ -563,7 +563,7 @@ function acImageBlock(image: RawElement, exclude: ReadonlySet<RawElement>, ctx: 
   return imageBlock(src, image.attrs["ac:alt"], ctx);
 }
 
-/** Block-level children of a page/container → Noema blocks, in order. */
+/** Block-level children of a page/container → MVP Brain blocks, in order. */
 function blocksFromNodes(
   nodes: readonly RawNode[],
   exclude: ReadonlySet<RawElement>,
@@ -901,7 +901,7 @@ function countPages(pages: readonly ConfluencePage[]): number {
 /* ----------------------------------------------------------------- public */
 
 /**
- * Parse a Confluence HTML export into a Noema page tree.
+ * Parse a Confluence HTML export into an MVP Brain page tree.
  *
  * Pure, deterministic and total: malformed input, unknown macros and missing
  * titles degrade (to text, a counted warning, `Untitled`) instead of throwing.

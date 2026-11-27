@@ -43,7 +43,7 @@ export default async function LoginPage({
   return (
     <AuthShell
       title="Welcome back"
-      subtitle="Sign in to your Noema workspace."
+      subtitle="Sign in to your MVP Brain workspace."
     >
       {error === "sso" && (
         <p role="alert" className="mb-4 text-sm text-danger">

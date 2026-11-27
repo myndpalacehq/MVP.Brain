@@ -11,7 +11,7 @@
 
 ## 1. Problem statement
 
-Templates are the one Noema subsystem where **the matrix and reality disagree
+Templates are the one MVP Brain subsystem where **the matrix and reality disagree
 in both directions**: several rows marked 🧭 "Planned" have shipped code
 (database row templates, the template button block, recurring materialization),
 while the rows marked ✅/🟡 describe only the *home* gallery and page

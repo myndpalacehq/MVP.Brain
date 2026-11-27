@@ -1,6 +1,6 @@
 # Docker
 
-Noema ships as a prebuilt multi-arch container image:
+MVP Brain ships as a prebuilt multi-arch container image:
 
 ```
 ghcr.io/guembri01/noema

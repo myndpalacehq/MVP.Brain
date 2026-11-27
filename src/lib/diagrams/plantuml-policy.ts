@@ -61,7 +61,7 @@ User --> Edit
 User --> Share
 @enduml` },
   { id: "component", label: "UML component", source: `@startuml
-package "Noema" {
+package "MVP Brain" {
   [Web app] as Web
   [API] as API
   database "Postgres" as DB

@@ -122,7 +122,7 @@ describe("security headers (next.config.ts)", () => {
       `script-src 'self' 'wasm-unsafe-eval' '${THEME_SCRIPT_SHA256}'`,
     );
     expect(csp).toContain("style-src 'self' 'unsafe-inline'");
-    // Noema embeds OTHERS (embeds.ts allowlist) - it is never embedded itself,
+    // MVP Brain embeds OTHERS (embeds.ts allowlist) - it is never embedded itself,
     // so framing is denied outright.
     expect(csp).toContain("frame-ancestors 'none'");
     expect(csp).toContain("https://www.youtube.com");

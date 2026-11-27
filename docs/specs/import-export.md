@@ -11,7 +11,7 @@
 
 ## 1. Problem statement
 
-Noema already ships a working import/export surface: Markdown, `.zip`
+MVP Brain already ships a working import/export surface: Markdown, `.zip`
 (Markdown-archive), Word (`.docx`), Trello JSON, Notion API and ICS feed
 imports on the way in; page Markdown/JSON/HTML/PDF, database CSV and
 whole-workspace zip on the way out. But the round trip is not trustworthy:

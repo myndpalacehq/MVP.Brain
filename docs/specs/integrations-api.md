@@ -10,7 +10,7 @@
 
 ## 1. Problem statement
 
-Noema already has the skeleton of a public integration platform: a versioned
+MVP Brain already has the skeleton of a public integration platform: a versioned
 REST surface (`/api/v1/*`), hashed API tokens, a webhook dispatcher with HMAC
 signing, and an OAuth 2.0 authorization-code flow with a consent screen. But
 every one of those four pillars is a **first slice** — each is missing the one

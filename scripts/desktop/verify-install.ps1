@@ -1,4 +1,4 @@
-﻿# Verify the *installed* Noema desktop app, end to end, and print a report.
+﻿# Verify the *installed* MVP Brain desktop app, end to end, and print a report.
 #
 #   powershell -File scripts/desktop/verify-install.ps1                 # check what is installed
 #   powershell -File scripts/desktop/verify-install.ps1 -Setup <setup.exe>   # reinstall first
@@ -23,7 +23,7 @@ param(
 
 $ErrorActionPreference = "Continue"
 New-Item -ItemType Directory -Force -Path $OutDir | Out-Null
-$installDir = Join-Path $env:LOCALAPPDATA "Noema"
+$installDir = Join-Path $env:LOCALAPPDATA "MVP Brain"
 $exe = Join-Path $installDir "noema-desktop.exe"
 $failures = @()
 $notes = @()
@@ -34,7 +34,7 @@ function Step($ok, $label, $detail = "") {
     if (-not $ok) { $script:failures += $label }
 }
 
-function Stop-Noema {
+function Stop-MVP Brain {
     Get-Process noema-node -ErrorAction SilentlyContinue | Stop-Process -Force -ErrorAction SilentlyContinue
     Get-Process noema-desktop -ErrorAction SilentlyContinue | Stop-Process -Force -ErrorAction SilentlyContinue
     Start-Sleep -Seconds 2
@@ -68,7 +68,7 @@ function Find-NoemaPort($Process, [int]$TimeoutSeconds = 180) {
     return $null
 }
 
-Write-Output "Noema installed-app verification`n"
+Write-Output "MVP Brain installed-app verification`n"
 
 if ($UninstallFirst -and (Test-Path (Join-Path $installDir "uninstall.exe"))) {
     Write-Output "  uninstalling the previous version…"
@@ -94,7 +94,7 @@ Step (Test-Path (Join-Path $installDir "uninstall.exe")) "uninstaller present"
 $panicLog = Join-Path $env:TEMP "noema-panic.log"
 if (Test-Path $panicLog) { Remove-Item $panicLog -Force }
 
-Stop-Noema
+Stop-MVP Brain
 Write-Output "`n  launching…"
 $app = Start-Process -FilePath $exe -PassThru
 Step ($app.Id -gt 0) "launched" "pid $($app.Id)"
@@ -143,7 +143,7 @@ Step ($servers -le 1) "exactly one supervised server" "$servers server process(e
 # The port is remembered on purpose: the document origin stays the same across
 # launches, so everything the app keeps in the browser — the theme preference,
 # open tabs, recent pages, the offline cache — is still there after a restart.
-Stop-Noema
+Stop-MVP Brain
 $relaunch = Start-Process -FilePath $exe -PassThru
 $portAgain = Find-NoemaPort $relaunch $ReadyTimeoutSeconds
 Step ($null -ne $portAgain -and $portAgain -eq $port) "a relaunch serves on the same port" "port $port → $portAgain"
@@ -163,7 +163,7 @@ if (Test-Path $log) {
     Get-Content $log | Select-Object -Last 6 | ForEach-Object { "    $_" }
 }
 
-Stop-Noema
+Stop-MVP Brain
 Write-Output ""
 if ($failures.Count -gt 0) {
     Write-Output "$($failures.Count) failure(s): $($failures -join '; ')"

@@ -1,5 +1,5 @@
 #!/bin/sh
-# Noema pre-commit hook — an opt-in convenience, NOT the check.
+# MVP Brain pre-commit hook — an opt-in convenience, NOT the check.
 #
 # It does not run in a fresh clone: `core.hooksPath` is a local Git setting, so
 # the repository cannot switch it on for you. Enable it once per clone with

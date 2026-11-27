@@ -1,6 +1,6 @@
 # The gallery
 
-Every screen in Noema, photographed in the seeded demo workspace.
+Every screen in MVP Brain, photographed in the seeded demo workspace.
 
 The images are **generated, not hand-taken**:
 [`scripts/screenshots.mjs`](../scripts/screenshots.mjs) drives the running app in

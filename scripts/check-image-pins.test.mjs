@@ -45,7 +45,7 @@ const POSTGRES_DIGEST =
  */
 const PRE_FIX_DOCKERFILE = `# syntax=docker/dockerfile:1
 # =============================================================================
-# B62 — Noema app image (spec R28.22): deps -> builder -> minimal runner.
+# B62 — MVP Brain app image (spec R28.22): deps -> builder -> minimal runner.
 # =============================================================================
 ARG NODE_VERSION=24
 

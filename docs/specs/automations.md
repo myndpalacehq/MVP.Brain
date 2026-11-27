@@ -10,7 +10,7 @@
 
 ## 1. Problem statement
 
-Noema has every ingredient of a rule engine and none of the engine: tickets
+MVP Brain has every ingredient of a rule engine and none of the engine: tickets
 already emit an append-only activity stream, labels/assignees/statuses already
 change through one server-action layer, a hardened cron endpoint already
 exists, and a recurrence helper already computes "next daily/weekly/monthly

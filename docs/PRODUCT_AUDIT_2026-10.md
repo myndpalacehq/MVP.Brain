@@ -1,4 +1,4 @@
-# Noema — product, design and architecture audit
+# MVP Brain — product, design and architecture audit
 
 **Audited:** 2026-10-22 · local `main` at `d3da779`
 **Scope:** public landing, authentication, workspace shell, editor chrome,
@@ -11,7 +11,7 @@ live localhost rendering, static audits, typecheck/lint/tests/build.
 
 ## 1. Executive summary
 
-Noema is not a generic CRUD app with a Notion skin. It is a serious,
+MVP Brain is not a generic CRUD app with a Notion skin. It is a serious,
 server-first workspace with a coherent “everything is a page” domain, a deep
 primitive kit, a tested editor and database surface, and an unusually strong
 accessibility/security posture for a project of this size.
@@ -172,7 +172,7 @@ user-visible today; they belong in a sequenced roadmap, not a rewrite.
 
 ### Direction: **“Quiet editorial workspace”**
 
-Noema should feel like a well-made desk, not a dashboard. The product already
+MVP Brain should feel like a well-made desk, not a dashboard. The product already
 has the right instincts: a paper-white canvas, warm neutrals, a restrained
 blue, small radii and type-led hierarchy. The missing layer is **editorial
 confidence** — a recognizable mark, a strong first screen, and a tighter
@@ -414,7 +414,7 @@ The editor bundle is the next budget to set.
 
 Phase 1 is complete when:
 
-- [x] Landing, login and signup use the Noema mark and wordmark; no duplicated
+- [x] Landing, login and signup use the MVP Brain mark and wordmark; no duplicated
       auth layout code.
 - [x] `/`, `/login`, `/signup` render at 390 and 1440 with no horizontal
       overflow, no console errors and no unlabelled focusable controls.

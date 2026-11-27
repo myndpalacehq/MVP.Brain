@@ -47,7 +47,7 @@ const PRIORITY = [
 
 const pad = (value, width) => String(value).padEnd(width);
 const lines = [];
-lines.push("# Noema — remaining work");
+lines.push("# MVP Brain — remaining work");
 lines.push("");
 lines.push("> Generated from `docs/FEATURE_MATRIX.md` by `npm run docs:gaps`. Do not edit by hand.");
 lines.push("");

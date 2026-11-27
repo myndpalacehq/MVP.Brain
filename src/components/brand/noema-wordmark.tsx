@@ -3,7 +3,7 @@ import { NoemaMark } from "@/components/brand/noema-mark";
 import { cn } from "@/lib/utils";
 
 /**
- * Noema's public lockup: the measured N mark in a filled tile plus the
+ * MVP Brain's public lockup: the measured N mark in a filled tile plus the
  * wordmark. The mark is the product's identity, not decoration for a single
  * assistant button, so the landing, sign-in and sign-up surfaces all use this
  * one component instead of three spellings of the name.
@@ -36,7 +36,7 @@ export function NoemaWordmark({
           textClassName,
         )}
       >
-        Noema
+        MVP Brain
       </span>
     </span>
   );

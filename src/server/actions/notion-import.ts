@@ -141,7 +141,7 @@ export type NotionImportResult =
       slug: string;
       pages: number;
       counts: ImportCounts;
-      /** Which Notion block/property types had no Noema mapping (loss report). */
+      /** Which Notion block/property types had no MVP Brain mapping (loss report). */
       unmapped: NotionMappingSummary;
       /** R24: the options this run actually honoured. */
       options: NotionImportOptions;
@@ -218,7 +218,7 @@ export async function importNotionPageAction(input: {
   let failed = 0;
 
   // Vocabulary coverage gathered while fetching, so the result can report which
-  // Notion block/property types had no Noema mapping (see
+  // Notion block/property types had no MVP Brain mapping (see
   // `summarizeNotionMapping`). Only additive: it never changes what is written.
   const blockTypes: string[] = [];
   const propertyTypes: string[] = [];

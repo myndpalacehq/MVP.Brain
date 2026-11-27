@@ -149,7 +149,7 @@ export const STRATEGIES: readonly StrategyDefinition[] = [
     label: "Passkey",
     kind: "passkey",
     enabled: true,
-    config: { rpName: "Noema", callbackPath: "/api/auth/passkey/callback" },
+    config: { rpName: "MVP Brain", callbackPath: "/api/auth/passkey/callback" },
   },
 ];
 

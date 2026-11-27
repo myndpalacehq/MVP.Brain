@@ -10,7 +10,7 @@
 
 ## 1. Problem statement
 
-Noema ships an **opt-in, unauthenticated, memory-only** Yjs relay
+MVP Brain ships an **opt-in, unauthenticated, memory-only** Yjs relay
 (`scripts/collab-server.mjs`) and a client wiring in
 `src/components/editor/page-editor.tsx` that connects when
 `NEXT_PUBLIC_COLLAB_URL` is set at build time. Two users who both have collab
@@ -101,7 +101,7 @@ is incorrect; all realtime client code lives inline in `page-editor.tsx`.
 | --- | --- | --- |
 | **Yjs + current TipTap binding** (`@tiptap/extension-collaboration` + `@tiptap/y-tiptap`, `y-websocket` protocol, `y-protocols` awareness) | Already installed (`package.json:57-58,97-99`) and wired (`page-editor.tsx:316-324`); the relay server already speaks the wire protocol; awareness exists; smallest reviewable diff; largest ecosystem for ProseMirror-family editors. | **Chosen.** |
 | Automerge (`automerge-repo`) | Strong CRDT, but would replace the editor binding, the server, and every integration point built on y-websocket. TipTap support is third-party. No gain over Yjs for a ProseMirror doc. | Rejected — full rewrite of working code. |
-| Lexical | Different editor core; Noema's entire block-extension set (TableKit, Mathematics, BlockColors, custom blocks…) is TipTap/ProseMirror. | Rejected — editor rewrite. |
+| Lexical | Different editor core; MVP Brain's entire block-extension set (TableKit, Mathematics, BlockColors, custom blocks…) is TipTap/ProseMirror. | Rejected — editor rewrite. |
 | Plain OT | Needs a single authoritative transform server with total order; offline merge and arbitrary concurrent structural edits (block moves, table edits) are far harder to get right than with CRDTs; no awareness story. | Rejected — higher complexity, worse offline semantics. |
 
 **Decision: Yjs, extending the existing foundation** (per B09:

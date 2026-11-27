@@ -1,4 +1,4 @@
-# Noema — REST API reference
+# MVP Brain — REST API reference
 
 Generated for the **API docs gap** item (**B48**) by a systematic walk of every route
 handler under `src/app/api/**` plus the three handlers that live outside it
@@ -752,10 +752,10 @@ recovered blocks as one page.
 
 ## 9. Webhooks (outbound only) and inbound endpoints
 
-**Outbound**: Noema *sends* webhooks — there is no inbound endpoint for the
-providers Noema talks to. The one inbound route it does have is
+**Outbound**: MVP Brain *sends* webhooks — there is no inbound endpoint for the
+providers MVP Brain talks to. The one inbound route it does have is
 `POST /api/webhooks/inbound` (below), which lets an *automation* call back
-into Noema.
+into MVP Brain.
 
 - **Events** (`src/lib/webhooks.ts`): `page.created`, `page.updated`,
   `row.created`, `comment.created`. Empty event list = subscribe to all.

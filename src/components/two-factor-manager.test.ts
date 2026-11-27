@@ -17,7 +17,7 @@ import { renderToStaticMarkup } from "react-dom/server";
 vi.mock("@/server/actions/two-factor", () => ({
   startTwoFactorAction: vi.fn(async () => ({
     secret: "JBSWY3DPEHPK3PXP",
-    otpauth: "otpauth://totp/Noema:me?secret=JBSWY3DPEHPK3PXP",
+    otpauth: "otpauth://totp/MVP Brain:me?secret=JBSWY3DPEHPK3PXP",
   })),
   enableTwoFactorAction: vi.fn(async () => ({ ok: true })),
   disableTwoFactorAction: vi.fn(async () => ({ ok: true })),
@@ -50,7 +50,7 @@ import {
 const h = createElement;
 
 const SECRET = "JBSWY3DPEHPK3PXP";
-const OTPAUTH = "otpauth://totp/Noema:me?secret=JBSWY3DPEHPK3PXP";
+const OTPAUTH = "otpauth://totp/MVP Brain:me?secret=JBSWY3DPEHPK3PXP";
 
 const setupProps = (
   overrides: Partial<TwoFactorSetupProps> & { step: TwoFactorStep },

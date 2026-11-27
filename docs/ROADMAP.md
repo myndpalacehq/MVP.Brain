@@ -274,4 +274,4 @@ Ordered by dependency and impact. Every item maps to rows in
 ## Non-goals (for now)
 
 - Proprietary Notion code/assets or branding.
-- Exact byte-for-byte UI clone; Noema aims for feature parity, not visual imitation.
+- Exact byte-for-byte UI clone; MVP Brain aims for feature parity, not visual imitation.

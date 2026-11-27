@@ -2,7 +2,7 @@ import type { PropertyType } from "@prisma/client";
 import type { DBProperty, DBRow } from "@/components/database/database-types";
 
 /**
- * Pure Asana JSON export → Noema database shape parser (spec
+ * Pure Asana JSON export → MVP Brain database shape parser (spec
  * `import-export.md` §12 "Import Asana").
  *
  * Output deliberately reuses the app's own model (`DBProperty` / `DBRow`) and
@@ -30,9 +30,9 @@ export type AsanaImportMeta = {
   customFields: number;
   /** Task entries that were not objects at all. */
   skippedMalformedTasks: number;
-  /** Custom-field values present but not representable in Noema. */
+  /** Custom-field values present but not representable in MVP Brain. */
   skippedCustomFieldValues: number;
-  /** Custom-field types with no Noema equivalent, deduped, first-seen order. */
+  /** Custom-field types with no MVP Brain equivalent, deduped, first-seen order. */
   unmappedCustomFieldTypes: string[];
 };
 
@@ -59,11 +59,11 @@ export const ASANA_CUSTOM_FIELD_TYPE_MAP = {
   formula: "FORMULA",
 } as const satisfies Readonly<Record<string, PropertyType>>;
 
-/** Noema option/tint palette (see `COLOR_CHOICES`). */
+/** MVP Brain option/tint palette (see `COLOR_CHOICES`). */
 const OPTION_COLORS = ["gray", "blue", "green", "yellow", "orange", "purple", "pink", "red"];
 const NOEMA_PALETTE_IDS: ReadonlySet<string> = new Set(OPTION_COLORS.concat("brown"));
 
-/** Asana colour names that need folding onto Noema's palette. */
+/** Asana colour names that need folding onto MVP Brain's palette. */
 const ASANA_COLOR_ALIASES: Readonly<Record<string, string>> = {
   "light-warm-gray": "gray",
   "light-gray": "gray",
@@ -119,7 +119,7 @@ function normalizeFieldTypeKey(value: unknown): string | null {
 }
 
 /**
- * Map an Asana custom-field type to a Noema `PropertyType`, or `null` when
+ * Map an Asana custom-field type to an MVP Brain `PropertyType`, or `null` when
  * there is no equivalent. Case- and padding-insensitive; any non-string input
  * maps to `null`.
  */
@@ -131,7 +131,7 @@ export function mapAsanaCustomFieldType(type: unknown): PropertyType | null {
 }
 
 /**
- * Map an Asana colour value to a Noema palette name, or `null` for anything
+ * Map an Asana colour value to an MVP Brain palette name, or `null` for anything
  * unrecognised. `light-` / `dark-` prefixes are stripped and the derived name
  * is checked first; a small alias table then folds the remaining names.
  */
@@ -280,7 +280,7 @@ function hasFieldValue(entry: RawFieldEntry): boolean {
   );
 }
 
-/** Noema cell value for a mapped custom-field entry, or `null` when unrepresentable. */
+/** MVP Brain cell value for a mapped custom-field entry, or `null` when unrepresentable. */
 function extractFieldValue(type: PropertyType, entry: RawFieldEntry, info: CustomFieldInfo): unknown {
   switch (type) {
     case "TEXT":
@@ -357,7 +357,7 @@ function emptyMeta(projectName: string): AsanaImportMeta {
 }
 
 /**
- * Parse an Asana JSON export into Noema's database shape.
+ * Parse an Asana JSON export into MVP Brain's database shape.
  *
  * Fail-safe: any input without tasks, sections or custom fields yields an empty
  * result instead of throwing; malformed tasks are skipped and counted; section,

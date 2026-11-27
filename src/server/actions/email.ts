@@ -131,7 +131,7 @@ export async function getEmailSummary(workspaceId: string): Promise<EmailSummary
       port: stored.port,
       secure: stored.secure,
       username: stored.username,
-      fromName: stored.fromName ?? "Noema",
+      fromName: stored.fromName ?? "MVP Brain",
       fromEmail: stored.fromEmail,
       replyTo: stored.replyTo,
       hasPassword: Boolean(decryptSecret(stored.passwordEncrypted)),
@@ -146,7 +146,7 @@ export async function getEmailSummary(workspaceId: string): Promise<EmailSummary
     port: Number(process.env.SMTP_PORT ?? 587),
     secure: process.env.SMTP_SECURE === "true",
     username: process.env.SMTP_USER ?? null,
-    fromName: process.env.SMTP_FROM_NAME ?? "Noema",
+    fromName: process.env.SMTP_FROM_NAME ?? "MVP Brain",
     fromEmail: process.env.SMTP_FROM ?? "",
     replyTo: process.env.SMTP_REPLY_TO ?? null,
     hasPassword: Boolean(process.env.SMTP_PASSWORD),
@@ -191,7 +191,7 @@ export async function saveEmailConfigAction(input: {
       secure: input.secure,
       username: input.username?.trim() || null,
       passwordEncrypted,
-      fromName: input.fromName?.trim().slice(0, 60) || "Noema",
+      fromName: input.fromName?.trim().slice(0, 60) || "MVP Brain",
       fromEmail,
       replyTo: input.replyTo?.trim() || null,
     },
@@ -201,7 +201,7 @@ export async function saveEmailConfigAction(input: {
       secure: input.secure,
       username: input.username?.trim() || null,
       passwordEncrypted,
-      fromName: input.fromName?.trim().slice(0, 60) || "Noema",
+      fromName: input.fromName?.trim().slice(0, 60) || "MVP Brain",
       fromEmail,
       replyTo: input.replyTo?.trim() || null,
     },
@@ -236,15 +236,15 @@ export async function testEmailAction(
   if (!recipient) return { error: "Enter a valid test recipient address." };
 
   const template = emailTemplate({
-    heading: "Noema test email",
+    heading: "MVP Brain test email",
     body: "Your SMTP settings work — invitations will be delivered from this workspace.",
-    ctaLabel: "Open Noema",
+    ctaLabel: "Open MVP Brain",
     ctaUrl: await appOrigin(),
     footer: "Sent from workspace email settings.",
   });
   const sent = await sendMail(workspaceId, {
     to: recipient,
-    subject: "Noema · SMTP test",
+    subject: "MVP Brain · SMTP test",
     kind: "test",
     ...template,
   });
@@ -383,7 +383,7 @@ export async function sendWorkspaceInviteAction(input: {
     heading: `You're invited to ${escapeHtml(workspace.name)}`,
     body: `${escapeHtml(auth.user.name)} invited you to collaborate in <strong>${escapeHtml(
       workspace.name,
-    )}</strong> on Noema (a ${
+    )}</strong> on MVP Brain (a ${
       role === "GUEST" ? "client/guest" : "member"
     } account)${projectName ? `, as a client on the project <strong>${escapeHtml(projectName)}</strong>` : ""}. The link expires in ${INVITE_TTL_DAYS} days.`,
     ctaLabel: "Accept invitation",

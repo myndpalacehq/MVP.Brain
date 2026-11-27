@@ -29,7 +29,7 @@ export default function NotFound() {
           <Button asChild>
             <Link href="/">
               <ArrowLeft className="size-4" aria-hidden />
-              Back to Noema
+              Back to MVP Brain
             </Link>
           </Button>
           <Button variant="secondary" asChild>

@@ -332,7 +332,7 @@ so a missed tick never floods the database).
 
 ```ini
 [Unit]
-Description=Noema — materialize recurring database templates
+Description=MVP Brain — materialize recurring database templates
 After=network-online.target
 
 [Service]
@@ -346,7 +346,7 @@ ExecStart=/usr/bin/curl -fsS -X POST -H "x-cron-secret: ${CRON_SECRET}" http://1
 
 ```ini
 [Unit]
-Description=Run the Noema templates cron every minute
+Description=Run the MVP Brain templates cron every minute
 
 [Timer]
 OnCalendar=*-*-* *:*:00
@@ -395,7 +395,7 @@ secret. Needs the seeded `demo@noema.local` user (`npm run db:seed`).
    it has both `host` and `fromEmail`.
 2. **Environment fallback**: `SMTP_HOST` **and** `SMTP_FROM` must both be set.
    Optional: `SMTP_PORT` (default 587), `SMTP_SECURE` (`"true"` → implicit
-   TLS), `SMTP_USER`, `SMTP_PASSWORD`, `SMTP_FROM_NAME` (default `Noema`),
+   TLS), `SMTP_USER`, `SMTP_PASSWORD`, `SMTP_FROM_NAME` (default `MVP Brain`),
    `SMTP_REPLY_TO`, `SMTP_ALLOW_SELF_SIGNED` (`"true"` relaxes
    `tls.rejectUnauthorized` for self-signed relays).
 3. Neither → mail is **not configured**: `sendMail` records an `EmailDelivery`

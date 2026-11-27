@@ -20,7 +20,7 @@ import {
 const bridge = {
   mode: "desktop" as const,
   apiBase: "http://127.0.0.1:47821",
-  dataDir: "C:/Users/x/AppData/Roaming/Noema",
+  dataDir: "C:/Users/x/AppData/Roaming/MVP Brain",
   appVersion: "1.4.3",
   platform: "windows-x86_64",
 };

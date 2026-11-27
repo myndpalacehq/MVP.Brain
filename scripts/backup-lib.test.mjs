@@ -435,7 +435,7 @@ describe("encryptBackup / decryptBackup", () => {
     expect(() => decryptBackup(tampered, SEAL_KEY)).toThrowError(/tampered/);
   });
 
-  it("refuses a file that is not a Noema backup", () => {
+  it("refuses a file that is not an MVP Brain backup", () => {
     expect(() => decryptBackup(Buffer.from("-- a plain, unencrypted dump\n"), SEAL_KEY)).toThrowError(
       BackupDecryptError,
     );

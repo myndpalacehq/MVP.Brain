@@ -144,7 +144,7 @@ describe("mapAsanaCustomFieldType", () => {
     ]).toEqual(["SELECT", "MULTI_SELECT", "TEXT"]);
   });
 
-  it("returns null for types with no Noema equivalent or non-strings", () => {
+  it("returns null for types with no MVP Brain equivalent or non-strings", () => {
     expect([
       mapAsanaCustomFieldType("custom_id"),
       mapAsanaCustomFieldType("reference"),

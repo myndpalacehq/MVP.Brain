@@ -1,5 +1,5 @@
 /**
- * The Noema authoring-window policy.
+ * The MVP Brain authoring-window policy.
  *
  * The project timeline follows a fixed rhythm: work lands only on the four
  * overnight windows that start on Wednesday, Thursday, Friday and Saturday

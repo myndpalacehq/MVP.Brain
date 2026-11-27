@@ -1,4 +1,4 @@
-# Noema — test plan (spec · UX · UI), exhaustive
+# MVP Brain — test plan (spec · UX · UI), exhaustive
 
 > How the app is proven, and everything that should be proven before a feature is
 > called done. Written against the known weaknesses so every open item has

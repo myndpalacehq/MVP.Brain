@@ -1,4 +1,4 @@
-# Noema documentation
+# MVP Brain documentation
 
 Everything written about the project, in roughly the order people want it. The
 [README](../README.md) is the front door; this is the rest of the house.

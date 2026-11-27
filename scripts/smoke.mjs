@@ -29,7 +29,7 @@ const token = await new SignJWT({ sub: user.id })
 
 const checks = [
   [`/w/${workspace.slug}`, /Top-level pages|Workspace/],
-  [`/w/${workspace.slug}/${page.id}`, /Welcome to Noema|Type/],
+  [`/w/${workspace.slug}/${page.id}`, /Welcome to MVP Brain|Type/],
   [`/w/${workspace.slug}/${database.id}`, /Product roadmap|Table|Board|New row/],
   [`/w/${workspace.slug}/search?q=editor`, /result/],
 ];

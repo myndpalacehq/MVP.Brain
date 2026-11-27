@@ -48,7 +48,7 @@ describe("i18n locale parity", () => {
  * Red-first evidence (first run written against the original assumptions):
  * - unknown-key: 3/3 cases failed — "fallback" read as the usual
  *   key-string convention, actual is `undefined` (see the describe below).
- * - interpolation: params call failed in vitest ('Search' ≠ 'Search Noema')
+ * - interpolation: params call failed in vitest ('Search' ≠ 'Search MVP Brain')
  *   AND in tsc (TS2554 ×2, "Expected 2 arguments, but got 3") — there is no
  *   interpolation API (see the interpolation describe).
  */

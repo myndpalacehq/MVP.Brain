@@ -39,7 +39,7 @@ const packageVersion: string = JSON.parse(readFileSync(join(root, "package.json"
  *   attributes + React SSR inline styles; a nonce would disable it).
  * - `img/media-src` allow `data:`/`blob:` + `https:`; `connect-src 'self'`
  *   covers same-origin fetch/SSE and the dev HMR websocket;
- *   `frame-src` mirrors `detectEmbed()` hosts; Noema is never embedded ->
+ *   `frame-src` mirrors `detectEmbed()` hosts; MVP Brain is never embedded ->
  *   `frame-ancestors 'none'` + `X-Frame-Options: DENY`.
  *
  * Applied via `headers()` below: static pages, dynamic RSC renders, route

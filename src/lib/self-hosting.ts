@@ -341,7 +341,7 @@ export const REQUIRED_ENV: readonly EnvDescriptor[] = [
     required: false,
     scope: "email",
     secret: false,
-    example: "Noema",
+    example: "MVP Brain",
     description: "Display name used for outgoing mail.",
   },
   {

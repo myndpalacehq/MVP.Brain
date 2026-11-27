@@ -1,5 +1,5 @@
 /**
- * Noema demo seed — `npm run db:seed` (`tsx prisma/seed.ts`).
+ * MVP Brain demo seed — `npm run db:seed` (`tsx prisma/seed.ts`).
  *
  * Builds a complete, believable product team's workspace: six people, three
  * teamspaces, four projects with milestones, a page tree (handbook, specs,

@@ -44,7 +44,7 @@ pub fn install_panic_hook() {
             .map(|elapsed| elapsed.as_secs())
             .unwrap_or(0);
         let report = format!(
-            "Noema {} — panic\nepoch: {seconds}\nversion: {}\nplatform: {}-{}\nthread: {:?}\n{info}\n\n",
+            "MVP Brain {} — panic\nepoch: {seconds}\nversion: {}\nplatform: {}-{}\nthread: {:?}\n{info}\n\n",
             env!("CARGO_PKG_VERSION"),
             env!("CARGO_PKG_VERSION"),
             std::env::consts::OS,
@@ -173,7 +173,7 @@ pub fn run() {
                 &handle,
                 "lifecycle",
                 &format!(
-                    "Noema {} starting on {}-{}",
+                    "MVP Brain {} starting on {}-{}",
                     handle.package_info().version,
                     std::env::consts::OS,
                     std::env::consts::ARCH
@@ -262,7 +262,7 @@ pub fn run() {
 
     let app = builder
         .build(tauri::generate_context!())
-        .expect("error while building Noema");
+        .expect("error while building MVP Brain");
 
     app.run(|app_handle, event| {
         if let RunEvent::ExitRequested { .. } | RunEvent::Exit = event {

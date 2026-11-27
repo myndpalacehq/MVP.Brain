@@ -845,12 +845,12 @@ describe("redactObject — deep, non-mutating redaction", () => {
 
   it("recurses through nested objects and arrays", () => {
     const input = {
-      public: { name: "Noema", settings: { theme: "dark" } },
+      public: { name: "MVP Brain", settings: { theme: "dark" } },
       rows: [{ password: SECRET_VALUE }, { nested: { token: SECRET_VALUE } }],
     };
     const redacted = redactObject(input);
     expect(redacted).toEqual({
-      public: { name: "Noema", settings: { theme: "dark" } },
+      public: { name: "MVP Brain", settings: { theme: "dark" } },
       rows: [
         { password: redact(SECRET_VALUE) },
         { nested: { token: redact(SECRET_VALUE) } },

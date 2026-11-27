@@ -67,7 +67,7 @@ describe("formatIso8601Date — UTC ISO 8601", () => {
 });
 
 const RSS_INPUT = {
-  title: "Noema Updates",
+  title: "MVP Brain Updates",
   link: "https://noema.example/blog",
   description: "Latest posts",
   items: [
@@ -93,7 +93,7 @@ describe("buildRssFeed — RSS 2.0", () => {
 
   it("writes the channel title, link and description", () => {
     const xml = buildRssFeed(RSS_INPUT);
-    expect(xml).toContain("<title>Noema Updates</title>");
+    expect(xml).toContain("<title>MVP Brain Updates</title>");
     expect(xml).toContain("<link>https://noema.example/blog</link>");
     expect(xml).toContain("<description>Latest posts</description>");
   });
@@ -139,7 +139,7 @@ describe("buildRssFeed — RSS 2.0", () => {
 });
 
 const ATOM_INPUT = {
-  title: "Noema Updates",
+  title: "MVP Brain Updates",
   link: "https://noema.example/blog",
   description: "Latest posts",
   id: "https://noema.example/blog/feed",
@@ -160,7 +160,7 @@ describe("buildAtomFeed — Atom 1.0", () => {
   it("declares the Atom namespace and the feed identity", () => {
     const xml = buildAtomFeed(ATOM_INPUT);
     expect(xml).toContain('<feed xmlns="http://www.w3.org/2005/Atom">');
-    expect(xml).toContain("<title>Noema Updates</title>");
+    expect(xml).toContain("<title>MVP Brain Updates</title>");
     expect(xml).toContain('<link href="https://noema.example/blog"/>');
     expect(xml).toContain("<id>https://noema.example/blog/feed</id>");
     expect(xml).toContain("<updated>2026-01-15T12:00:00.000Z</updated>");

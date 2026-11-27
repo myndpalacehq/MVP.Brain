@@ -11,14 +11,14 @@ export function welcomeDoc(): BlockDoc {
       {
         type: "heading",
         attrs: { level: 1 },
-        content: [{ type: "text", text: "Welcome to Noema 👋" }],
+        content: [{ type: "text", text: "Welcome to MVP Brain 👋" }],
       },
       {
         type: "paragraph",
         content: [
           {
             type: "text",
-            text: "Noema is an open-source, self-hosted workspace for notes, docs and databases. This page is a normal page — edit it however you like.",
+            text: "MVP Brain is an open-source, self-hosted workspace for notes, docs and databases. This page is a normal page — edit it however you like.",
           },
         ],
       },
