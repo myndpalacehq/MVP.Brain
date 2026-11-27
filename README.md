@@ -14,7 +14,7 @@ app that needs nothing else installed.
 <!-- The app's repository URL lives in `src/lib/project-info.ts`; keep it in step with these links. -->
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
-[![CI](https://github.com/Temped/mvp-brain/actions/workflows/ci.yml/badge.svg)](https://github.com/Temped/mvp-brain/actions/workflows/ci.yml)
+[![CI](https://github.com/myndpalacehq/MVP.Brain/actions/workflows/ci.yml/badge.svg)](https://github.com/myndpalacehq/MVP.Brain/actions/workflows/ci.yml)
 [![Next.js 15](https://img.shields.io/badge/Next.js-15-black.svg)](https://nextjs.org)
 [![Node 24](https://img.shields.io/badge/node-%E2%89%A524-brightgreen.svg)](./.nvmrc)
 [![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](./CONTRIBUTING.md)
@@ -658,7 +658,7 @@ built by:
 - **Bilel Guembri**
 - **Wissal Ben Othmen**
 
-MVP Brain is maintained by [Temped](https://github.com/Temped).
+MVP Brain is maintained by [Mynd Palace](https://github.com/myndpalacehq).
 
 See [`AUTHORS.md`](./AUTHORS.md) for the full list, and
 [`CHANGELOG.md`](./CHANGELOG.md) for what changed when.

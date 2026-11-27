@@ -13,13 +13,13 @@
       "name": "Wissal Ben Othmen"
     }
   ],
-  "homepage": "https://github.com/Temped/mvp-brain#readme",
+  "homepage": "https://github.com/myndpalacehq/MVP.Brain#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Temped/mvp-brain.git"
+    "url": "git+https://github.com/myndpalacehq/MVP.Brain.git"
   },
   "bugs": {
-    "url": "https://github.com/Temped/mvp-brain/issues"
+    "url": "https://github.com/myndpalacehq/MVP.Brain/issues"
   },
   "keywords": [
     "notion-alternative",

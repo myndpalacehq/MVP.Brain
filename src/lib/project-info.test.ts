@@ -56,6 +56,6 @@ describe("project info", () => {
     // bundle all point at it), so this pins its shape rather than the account:
     // a fork may repoint it, but it must stay a real, mutable link.
     expect(PROJECT_REPOSITORY).toMatch(/^https:\/\/github\.com\/[\w.-]+\/[\w.-]+$/);
-    expect(PROJECT_REPOSITORY).toBe("https://github.com/Temped/mvp-brain");
+    expect(PROJECT_REPOSITORY).toBe("https://github.com/myndpalacehq/MVP.Brain");
   });
 });

@@ -14,8 +14,8 @@
 /** Display name, matching `package.json` and `tauri.conf.json`. */
 export const PROJECT_NAME = "MVP Brain";
 
-/** Canonical repository URL — <https://github.com/Temped/mvp-brain>. */
-export const PROJECT_REPOSITORY = "https://github.com/Temped/mvp-brain";
+/** Canonical repository URL — <https://github.com/myndpalacehq/MVP.Brain>. */
+export const PROJECT_REPOSITORY = "https://github.com/myndpalacehq/MVP.Brain";
 
 /** Where the long-form documentation lives (see `docs/README.md`). */
 export const PROJECT_DOCS_URL = `${PROJECT_REPOSITORY}/tree/main/docs`;
