@@ -1,9 +1,9 @@
 import type { PropertyType } from "@prisma/client";
 
 /**
- * Notion → Noema mapping layer (pure, deterministic, total).
+ * Notion → MVP Brain mapping layer (pure, deterministic, total).
  *
- * This is the vocabulary half of the Notion importer: it answers "which Noema
+ * This is the vocabulary half of the Notion importer: it answers "which MVP Brain
  * node / property type does this Notion type become?" and "which Notion types
  * have no home yet?". It performs **no** I/O and never throws — an unknown or
  * malformed type always maps to `null` instead, and `unmappedBlocks` lets the
@@ -20,7 +20,7 @@ import type { PropertyType } from "@prisma/client";
  * referenced, and everything unknown degrades rather than crashing.
  */
 
-/** Noema block (TipTap node) names this layer can emit. */
+/** MVP Brain block (TipTap node) names this layer can emit. */
 export const NOEMA_BLOCK_TYPES = [
   "paragraph",
   "heading",
@@ -45,7 +45,7 @@ export const NOEMA_BLOCK_TYPES = [
 
 export type NoemaBlockType = (typeof NOEMA_BLOCK_TYPES)[number];
 
-/** Noema option/tint palette (see `COLOR_CHOICES` / `BLOCK_COLOR_CATALOGUE`). */
+/** MVP Brain option/tint palette (see `COLOR_CHOICES` / `BLOCK_COLOR_CATALOGUE`). */
 export const NOEMA_PALETTE_IDS = [
   "gray",
   "brown",
@@ -63,7 +63,7 @@ export type NoemaColor = (typeof NOEMA_PALETTE_IDS)[number];
 const NOEMA_COLOR_SET: ReadonlySet<string> = new Set(NOEMA_PALETTE_IDS);
 
 /**
- * Notion block type → Noema node name.
+ * Notion block type → MVP Brain node name.
  *
  * Types deliberately absent (they map to `null`): `child_page` / `child_database`
  * (become nested pages, not blocks), media `video` / `audio` / `file` / `pdf`
@@ -99,8 +99,8 @@ export const NOTION_BLOCK_MAP = {
 /**
  * Notion property (`properties[p].type`) → Prisma `PropertyType`.
  *
- * `title` folds onto `TEXT` because Noema expresses "name column" as a config
- * flag (`config.primary`), not a distinct enum. `verification` has no Noema
+ * `title` folds onto `TEXT` because MVP Brain expresses "name column" as a config
+ * flag (`config.primary`), not a distinct enum. `verification` has no MVP Brain
  * equivalent and maps to `null`.
  */
 export const PROPERTY_MAP = {
@@ -133,7 +133,7 @@ const BLOCK_LOOKUP: Readonly<Record<string, NoemaBlockType>> = NOTION_BLOCK_MAP;
 const PROPERTY_LOOKUP: Readonly<Record<string, PropertyType>> = PROPERTY_MAP;
 
 /**
- * Map a Notion block type to a Noema block type, or `null` when there is no
+ * Map a Notion block type to an MVP Brain block type, or `null` when there is no
  * native equivalent. Matches exactly (case- and whitespace-sensitive); any
  * non-string input maps to `null`.
  */
@@ -143,7 +143,7 @@ export function mapNotionBlockType(type: unknown): NoemaBlockType | null {
 }
 
 /**
- * Map a Notion property type to a Noema `PropertyType`, or `null` when there is
+ * Map a Notion property type to an MVP Brain `PropertyType`, or `null` when there is
  * no equivalent. Exact match; any non-string input maps to `null`.
  */
 export function mapNotionPropertyType(type: unknown): PropertyType | null {
@@ -152,7 +152,7 @@ export function mapNotionPropertyType(type: unknown): PropertyType | null {
 }
 
 /**
- * Map a Notion colour value to a Noema palette name, or `null` for "default"
+ * Map a Notion colour value to an MVP Brain palette name, or `null` for "default"
  * (no tint) and anything unrecognised. Notion's `_background` variants fold
  * onto the same palette entry as their foreground colour.
  */
@@ -164,7 +164,7 @@ export function mapNotionColor(value: unknown): NoemaColor | null {
 }
 
 /**
- * Collect the distinct Notion block types from `types` that have no Noema
+ * Collect the distinct Notion block types from `types` that have no MVP Brain
  * mapping (`mapNotionBlockType` returns `null`), in first-seen order, so an
  * import can report what it dropped. Empty, whitespace-only and non-string
  * entries are ignored; input is never mutated.

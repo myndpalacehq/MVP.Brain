@@ -9,7 +9,7 @@ import {
 } from "@/lib/paste";
 
 /**
- * Paste normalisation: clipboard HTML (from another Noema page, or a foreign
+ * Paste normalisation: clipboard HTML (from another MVP Brain page, or a foreign
  * app) -> TipTap JSON. Every block type the editor can hold must round-trip,
  * only unsafe markup may be stripped.
  */

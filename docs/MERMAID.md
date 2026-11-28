@@ -1,6 +1,6 @@
 # Mermaid diagrams
 
-Noema supports Mermaid diagrams inside ordinary code blocks. The source is the
+MVP Brain supports Mermaid diagrams inside ordinary code blocks. The source is the
 source of truth: it lives in the page document, so it participates in the same
 save, version-history, import/export, permission and real-time collaboration
 paths as the rest of the note.

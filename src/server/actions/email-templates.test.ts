@@ -111,7 +111,7 @@ function configureSmtp() {
   process.env.SMTP_HOST = "smtp.example.test";
   process.env.SMTP_PORT = "2525";
   process.env.SMTP_FROM = "noema@example.test";
-  process.env.SMTP_FROM_NAME = "Noema Env";
+  process.env.SMTP_FROM_NAME = "MVP Brain Env";
   process.env.SMTP_USER = "env-user";
   process.env.SMTP_PASSWORD = SMTP_PASSWORD_CANARY;
 }
@@ -202,7 +202,7 @@ describe("workspace invite template (sendWorkspaceInviteAction)", () => {
     expect(payload.subject).toBe("Bilel G invited you to Acme");
     expect(payload.text).toContain("You're invited to Acme");
     expect(payload.text).toContain(
-      "Bilel G invited you to collaborate in <strong>Acme</strong> on Noema (a member account). " +
+      "Bilel G invited you to collaborate in <strong>Acme</strong> on MVP Brain (a member account). " +
         "The link expires in 14 days.",
     );
     expect(payload.text).toContain(res.link);
@@ -211,7 +211,7 @@ describe("workspace invite template (sendWorkspaceInviteAction)", () => {
     expect(payload.html).toContain('href="' + res.link + '"');
     expect(payload.html).toContain(">Accept invitation</a>");
     expect(payload.html).toContain(escapeHtml("If you weren't expecting this, you can ignore the email."));
-    expect(payload.from).toBe('"Noema Env" <noema@example.test>');
+    expect(payload.from).toBe('"MVP Brain Env" <noema@example.test>');
 
     expect(deliveryRow()).toMatchObject({
       status: "sent",
@@ -263,7 +263,7 @@ describe("workspace invite template (sendWorkspaceInviteAction)", () => {
 
     const payload = lastPayload();
     expect(payload.text).toContain(
-      "on Noema (a client/guest account), as a client on the project <strong>Site relaunch</strong>. " +
+      "on MVP Brain (a client/guest account), as a client on the project <strong>Site relaunch</strong>. " +
         "The link expires in 14 days.",
     );
     expect(payload.subject).toBe("Bilel G invited you to Acme");
@@ -359,7 +359,7 @@ describe("teamspace invite template (inviteTeamspaceMemberAction)", () => {
     expect(payload.to).toBe("new.client@example.test");
     expect(payload.subject).toBe("Bilel G invited you to Product");
     expect(payload.text).toContain(
-      "Bilel G added you to the <strong>Product</strong> teamspace on Noema. " +
+      "Bilel G added you to the <strong>Product</strong> teamspace on MVP Brain. " +
         "This link expires in 14 days.",
     );
     const link = res.link;
@@ -434,15 +434,15 @@ describe("SMTP test email (testEmailAction)", () => {
 
     const payload = lastPayload();
     expect(payload.to).toBe("qa@example.test");
-    expect(payload.subject).toBe("Noema · SMTP test");
-    expect(payload.text).toContain("Noema test email");
+    expect(payload.subject).toBe("MVP Brain · SMTP test");
+    expect(payload.text).toContain("MVP Brain test email");
     expect(payload.text).toContain(
       "Your SMTP settings work — invitations will be delivered from this workspace.",
     );
-    expect(payload.text).toContain(`Open Noema: ${ORIGIN}`);
+    expect(payload.text).toContain(`Open MVP Brain: ${ORIGIN}`);
     expect(payload.text).toContain("Sent from workspace email settings.");
     expect(payload.html).toContain('href="' + ORIGIN + '"');
-    expect(payload.html).toContain(">Open Noema</a>");
+    expect(payload.html).toContain(">Open MVP Brain</a>");
     expectNoSecrets([payload.subject, payload.text, payload.html].join("\n"));
     expect(deliveryRow()).toMatchObject({ status: "sent", kind: "test" });
   });

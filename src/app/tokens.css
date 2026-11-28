@@ -1,5 +1,5 @@
 /* ============================================================================
-   Noema design tokens — see docs/DESIGN_SYSTEM.md
+   MVP Brain design tokens — see docs/DESIGN_SYSTEM.md
    ----------------------------------------------------------------------------
    Imported by globals.css. Rules:
    1. Colours come from `--color-*` (Tailwind utilities) — never raw hex in a
@@ -245,7 +245,7 @@
   gap: var(--space-1);
   padding: 1px var(--space-2);
   border-radius: var(--radius-chip);
-  font-size: 12px;
+  font-size: 0.75rem;
   line-height: 18px;
   font-weight: 500;
   border: 1px solid var(--tag-gray-bd);

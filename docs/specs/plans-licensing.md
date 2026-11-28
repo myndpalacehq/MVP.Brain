@@ -12,9 +12,9 @@
 
 ## 1. Problem statement
 
-Noema is an **MIT-licensed, self-hosted** application (`LICENSE:1-3`,
+MVP Brain is an **MIT-licensed, self-hosted** application (`LICENSE:1-3`,
 `README.md:13`). The product class (Notion) answers "pricing & plan-gated
-features" with four subscription tiers and a payment provider; Noema cannot —
+features" with four subscription tiers and a payment provider; MVP Brain cannot —
 there is **no billing surface, no customer account, and no payment processor**
 in this repo (§9 registers that honestly as N/A, not as "planned").
 
@@ -123,7 +123,7 @@ class charges money.
 
 ## 3. Decision
 
-**D1 — Two editions, not four tiers.** Noema ships a **community** edition
+**D1 — Two editions, not four tiers.** MVP Brain ships a **community** edition
 (the MIT tree as it runs today, default) and an **enterprise** edition
 (unlocked by a license file, §5). The matrix rows *Free/Personal/Team plan*
 (`:676-678`) all map to community — the operator's team size is not a
@@ -322,7 +322,7 @@ maps to a decision + `R26.x` there.
   per-page survivor); integration — unset ⇒ 0 deletes; set to N ⇒ only rows
   beyond the window removed; job rejects without valid `CRON_SECRET`.
 
-- **R26.15** — **AI usage limits (Class B / partial N/A).** Noema is BYO-key:
+- **R26.15** — **AI usage limits (Class B / partial N/A).** MVP Brain is BYO-key:
   the operator's own provider account is billed (`AiProviderConfig`
   `prisma/schema.prisma:544`, global `AI_*` env `ai-provider.ts:34-39`), so a
   per-plan token budget would meter money that is not ours. What ships:

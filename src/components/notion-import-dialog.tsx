@@ -127,7 +127,7 @@ export function NotionImportDialog({
   locale?: string;
   /**
    * Optional import-preview input: the Notion block / property types the page
-   * contains. When supplied, the dialog tallies how many map to Noema
+   * contains. When supplied, the dialog tallies how many map to MVP Brain
    * (`mapNotionBlockType` / `mapNotionPropertyType`) and warns about the ones
    * that do not (`unmappedBlocks`) before the user confirms. Purely additive:
    * a caller that passes neither sees the dialog exactly as before.

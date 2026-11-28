@@ -8,7 +8,7 @@ import { NoemaWordmark } from "@/components/brand/noema-wordmark";
  * Before this component, sign-in and sign-up each owned a slightly different
  * centred card with no product mark: the first screen of the product looked
  * like a generic form. The frame keeps the form itself untouched, puts the real
- * Noema lockup and a short, factual description of the product beside it, and
+ * MVP Brain lockup and a short, factual description of the product beside it, and
  * collapses to one column before the card gets cramped.
  */
 export function AuthShell({
@@ -47,7 +47,7 @@ export function AuthShell({
             Your workspace, on your machine.
           </h2>
           <p className="mt-4 max-w-lg text-base leading-relaxed text-muted">
-            Notes, docs, databases and projects share one page model. Noema runs
+            Notes, docs, databases and projects share one page model. MVP Brain runs
             on your own Postgres, or as a desktop app that needs nothing else
             installed.
           </p>

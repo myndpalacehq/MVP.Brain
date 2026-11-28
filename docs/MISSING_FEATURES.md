@@ -1,4 +1,4 @@
-# Noema — remaining work
+# MVP Brain — remaining work
 
 > Generated from `docs/FEATURE_MATRIX.md` by `npm run docs:gaps`. Do not edit by hand.
 
@@ -136,19 +136,19 @@ This file lists the **30** rows that are not finished, area by area, plus 22 int
 
 | Feature | What it should do | Status | Notes |
 | --- | --- | --- | --- |
-| Cloud-only history depth | Some tiers limit history length. | ⛔ | Noema keeps configurable local history; divergence. |
-| No offline-first guarantee | Some apps require connectivity. | ⛔ | Noema is local-first by design; divergence. |
+| Cloud-only history depth | Some tiers limit history length. | ⛔ | MVP Brain keeps configurable local history; divergence. |
+| No offline-first guarantee | Some apps require connectivity. | ⛔ | MVP Brain is local-first by design; divergence. |
 | Vendor data residency | Content lives on vendor servers. | ⛔ | Self-hosting keeps data on your infra; divergence. |
-| Opaque sync conflicts | Silent last-writer-wins behavior. | ⛔ | Noema uses CRDT with visible provenance. |
-| Limited export fidelity | Exports lose some structure. | ⛔ | Noema targets lossless round-trips. |
-| Steep permissions model | Complex inheritance surprises. | ⛔ | Noema makes inheritance explicit and previewable. |
-| Performance on huge pages | Very large pages degrade. | ⛔ | Noema virtualizes blocks and lags less. |
-| Formula language quirks | Subtle type/precedence gotchas. | ⛔ | Noema documents semantics precisely. |
-| Two-way relation setup friction | Relations confuse new users. | ⛔ | Noema offers guided relation creation. |
-| Recurring template scheduler | Limited scheduling control. | ⛔ | Noema exposes cron-style control. |
-| Search relevance opacity | Ranking is hard to tune. | ⛔ | Noema exposes ranking knobs. |
-| Migration lock-in | Hard to leave the platform. | ⛔ | Noema prioritizes portable data; divergence. |
-| AI vendor lock-in | AI options tied to one vendor. | ⛔ | Noema supports BYO/local models; divergence. |
-| Third-party tracking | Hosted analytics on public pages. | ⛔ | Noema ships no trackers by default; divergence. |
-| Mandatory accounts for sharing | Viewers may need accounts. | ⛔ | Noema plans lightweight guest viewing. |
+| Opaque sync conflicts | Silent last-writer-wins behavior. | ⛔ | MVP Brain uses CRDT with visible provenance. |
+| Limited export fidelity | Exports lose some structure. | ⛔ | MVP Brain targets lossless round-trips. |
+| Steep permissions model | Complex inheritance surprises. | ⛔ | MVP Brain makes inheritance explicit and previewable. |
+| Performance on huge pages | Very large pages degrade. | ⛔ | MVP Brain virtualizes blocks and lags less. |
+| Formula language quirks | Subtle type/precedence gotchas. | ⛔ | MVP Brain documents semantics precisely. |
+| Two-way relation setup friction | Relations confuse new users. | ⛔ | MVP Brain offers guided relation creation. |
+| Recurring template scheduler | Limited scheduling control. | ⛔ | MVP Brain exposes cron-style control. |
+| Search relevance opacity | Ranking is hard to tune. | ⛔ | MVP Brain exposes ranking knobs. |
+| Migration lock-in | Hard to leave the platform. | ⛔ | MVP Brain prioritizes portable data; divergence. |
+| AI vendor lock-in | AI options tied to one vendor. | ⛔ | MVP Brain supports BYO/local models; divergence. |
+| Third-party tracking | Hosted analytics on public pages. | ⛔ | MVP Brain ships no trackers by default; divergence. |
+| Mandatory accounts for sharing | Viewers may need accounts. | ⛔ | MVP Brain plans lightweight guest viewing. |
 

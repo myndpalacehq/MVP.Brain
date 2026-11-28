@@ -172,6 +172,75 @@ import {
 } from "./view-renderers-helpers";
 export * from "./view-renderers-helpers";
 
+/**
+ * The table's title cell. At rest the title wraps and is clamped to two lines
+ * (the row grows to fit); clicking or pressing Enter swaps in the same
+ * single-line input as before, which commits on blur when the value changed.
+ */
+function PrimaryTitleCell({
+  title,
+  editable,
+  label,
+  placeholder,
+  onCommit,
+}: {
+  title: string;
+  editable: boolean;
+  label: string;
+  placeholder: string;
+  onCommit: (value: string) => void;
+}) {
+  const [editing, setEditing] = useState(false);
+  if (editable && (editing || !title)) {
+    return (
+      <input
+        defaultValue={title}
+        aria-label={label}
+        placeholder={placeholder}
+        autoFocus={editing}
+        onBlur={(e) => {
+          if (e.target.value !== title) onCommit(e.target.value);
+          setEditing(false);
+        }}
+        onKeyDown={(e) => {
+          if (e.key === "Enter") e.currentTarget.blur();
+          if (e.key === "Escape") {
+            e.currentTarget.value = title;
+            e.currentTarget.blur();
+          }
+        }}
+        className="w-full bg-transparent outline-none placeholder:text-muted"
+      />
+    );
+  }
+  return (
+    <div
+      role={editable ? "button" : undefined}
+      tabIndex={editable ? 0 : undefined}
+      aria-label={label}
+      title={title}
+      onClick={editable ? () => setEditing(true) : undefined}
+      onKeyDown={
+        editable
+          ? (e) => {
+              if (e.key === "Enter") {
+                e.preventDefault();
+                setEditing(true);
+              }
+            }
+          : undefined
+      }
+      className={cn(
+        "line-clamp-2 w-full whitespace-normal break-words",
+        editable && "cursor-text",
+        !title && "text-muted",
+      )}
+    >
+      {title || placeholder}
+    </div>
+  );
+}
+
 export function TableView({
   locale,
   workspaceSlug,
@@ -437,22 +506,20 @@ export function TableView({
                 cellClass,
                 "align-top",
                 index === 0 && "min-w-[15rem]",
+                // The title column gets ~1.5x the room so titles can wrap.
+                isPrimary && "min-w-[22.5rem]",
                 frozen &&
                   index === 0 &&
                   "sticky left-0 bg-bg group-hover:bg-surface-2/60",
               )}
             >
               {isPrimary ? (
-                <input
-                  defaultValue={row.title}
-                  aria-label={t(locale, "nameLabel")}
-                  readOnly={!editable}
+                <PrimaryTitleCell
+                  title={row.title}
+                  editable={editable}
+                  label={t(locale, "nameLabel")}
                   placeholder={t(locale, "untitled")}
-                  onBlur={(e) =>
-                    e.target.value !== row.title &&
-                    setPrimary(row, e.target.value)
-                  }
-                  className="w-full bg-transparent outline-none placeholder:text-muted"
+                  onCommit={(value) => setPrimary(row, value)}
                 />
               ) : (
                 <Cell
@@ -674,6 +741,7 @@ export function TableView({
                   "border-b border-border-strong px-3 py-2 font-medium",
                   "sticky top-0 u-colors",
                   index === 0 && "min-w-[15rem]",
+                  property.id === primary?.id && "min-w-[22.5rem]",
                   frozen && index === 0 && "left-0",
                   "bg-surface",
                   scrolled && "shadow-1",

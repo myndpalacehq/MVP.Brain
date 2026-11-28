@@ -35,7 +35,7 @@ so in the report.
 
 ## Supported versions
 
-Noema is pre-1.5 and ships from `main`. Security fixes land on `main` and, where
+MVP Brain is pre-1.5 and ships from `main`. Security fixes land on `main` and, where
 a release is affected, in a patch release. There are no long-term support
 branches yet.
 

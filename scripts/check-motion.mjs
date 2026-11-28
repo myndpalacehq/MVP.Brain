@@ -1,4 +1,4 @@
-// Motion audit for the Noema design system.
+// Motion audit for the MVP Brain design system.
 //
 // The motion vocabulary lives in `src/app/tokens.css` (`--dur-*`, `--ease-*`,
 // the `.u-*` utilities) and is described in `docs/DESIGN_SYSTEM.md` §6 and

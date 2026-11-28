@@ -97,7 +97,7 @@ describe("the OpenCode Go provider", () => {
     expect(models).toContain("glm-5.3-flash");
     expect(models).toContain("kimi-k3");
     expect(models).toContain("minimax-m3.1-flash-free");
-    // The Anthropic, Google and Responses models need a transport Noema does
+    // The Anthropic, Google and Responses models need a transport MVP Brain does
     // not speak, so they are not offered.
     expect(models).not.toContain("claude-haiku-5-5");
     expect(models).not.toContain("gemini-4-argon-contributor");

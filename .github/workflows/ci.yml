@@ -137,7 +137,7 @@ jobs:
       - name: Compose exposure
         run: node scripts/check-compose-exposure.mjs && node scripts/check-compose-exposure.test.mjs
 
-      # Every commit — author *and* committer date — must land inside a Noema
+      # Every commit — author *and* committer date — must land inside an MVP Brain
       # authoring window (Wed–Sat evenings, Europe/Paris). See
       # src/lib/dates-policy.ts for the rule and the tests that pin its edges.
       # A commit GitHub itself created is exempt as a whole: the anchor is the

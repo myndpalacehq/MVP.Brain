@@ -1,6 +1,6 @@
 # Architecture
 
-Noema is a server-first Next.js 15 application backed by PostgreSQL via Prisma.
+MVP Brain is a server-first Next.js 15 application backed by PostgreSQL via Prisma.
 
 ## Layering
 

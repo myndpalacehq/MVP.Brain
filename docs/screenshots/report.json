@@ -3,7 +3,7 @@
     "name": "01-landing",
     "caption": "The public landing page",
     "url": "/",
-    "title": "Noema",
+    "title": "MVP Brain",
     "heading": "A local-first workspace for notes, docs and databases.",
     "file": "docs/screenshots/01-landing.png"
   },
@@ -11,7 +11,7 @@
     "name": "02-login",
     "caption": "Sign in — email, password, remember-me",
     "url": "/login",
-    "title": "Sign in · Noema",
+    "title": "Sign in · MVP Brain",
     "heading": "Welcome back",
     "file": "docs/screenshots/02-login.png"
   },
@@ -19,7 +19,7 @@
     "name": "03-home",
     "caption": "Workspace home — quick starts and the template gallery",
     "url": "/w/demo-workspace",
-    "title": "Noema",
+    "title": "MVP Brain",
     "heading": "Good morning, Demo",
     "file": "docs/screenshots/03-home.png"
   },
@@ -27,7 +27,7 @@
     "name": "04-home-dark",
     "caption": "The same home in dark mode",
     "url": "/w/demo-workspace",
-    "title": "Noema",
+    "title": "MVP Brain",
     "heading": "Good morning, Demo",
     "file": "docs/screenshots/04-home-dark.png"
   },
@@ -35,7 +35,7 @@
     "name": "05-sidebar",
     "caption": "Sidebar — favourites, pages, teamspaces, projects, tickets",
     "url": "/w/demo-workspace/cmvbj2631002hukloi0z5s75o",
-    "title": "Noema",
+    "title": "MVP Brain",
     "heading": "Getting started",
     "file": "docs/screenshots/05-sidebar.png"
   },
@@ -43,7 +43,7 @@
     "name": "06-editor",
     "caption": "The block editor — headings, callouts, toggles, code, tables, backlinks",
     "url": "/w/demo-workspace/cmvbj26430035ukloaxa7n387",
-    "title": "Noema",
+    "title": "MVP Brain",
     "heading": "Company handbook",
     "file": "docs/screenshots/06-editor.png"
   },
@@ -51,7 +51,7 @@
     "name": "07-slash-menu",
     "caption": "The slash menu",
     "url": "/w/demo-workspace/cmvbj26430035ukloaxa7n387",
-    "title": "Noema",
+    "title": "MVP Brain",
     "heading": "Company handbook",
     "file": "docs/screenshots/07-slash-menu.png"
   },
@@ -59,7 +59,7 @@
     "name": "08-command-palette",
     "caption": "Command palette (Ctrl/⌘ K)",
     "url": "/w/demo-workspace/cmvbj2631002hukloi0z5s75o",
-    "title": "Noema",
+    "title": "MVP Brain",
     "heading": "Getting started",
     "file": "docs/screenshots/08-command-palette.png"
   },
@@ -67,7 +67,7 @@
     "name": "09-quick-find",
     "caption": "Quick find (Ctrl/⌘ P)",
     "url": "/w/demo-workspace/cmvbj2631002hukloi0z5s75o",
-    "title": "Noema",
+    "title": "MVP Brain",
     "heading": "Getting started",
     "file": "docs/screenshots/09-quick-find.png"
   },
@@ -75,7 +75,7 @@
     "name": "10-shortcuts",
     "caption": "Keyboard shortcuts — the same dialog the desktop menu opens",
     "url": "/w/demo-workspace/cmvbj2631002hukloi0z5s75o",
-    "title": "Noema",
+    "title": "MVP Brain",
     "heading": "Getting started",
     "file": "docs/screenshots/10-shortcuts.png"
   },
@@ -83,7 +83,7 @@
     "name": "11-db-table",
     "caption": "Database — table view with relations, a rollup and a percent property",
     "url": "/w/demo-workspace/cmvbj264y003tuklo3pnyyl7g",
-    "title": "Noema",
+    "title": "MVP Brain",
     "heading": "Product roadmap",
     "file": "docs/screenshots/11-db-table.png"
   },
@@ -91,7 +91,7 @@
     "name": "12-db-board",
     "caption": "Database — board view grouped by status",
     "url": "/w/demo-workspace/cmvbj264y003tuklo3pnyyl7g",
-    "title": "Noema",
+    "title": "MVP Brain",
     "heading": "Import from Trello",
     "file": "docs/screenshots/12-db-board.png"
   },
@@ -99,7 +99,7 @@
     "name": "13-db-timeline",
     "caption": "Database — timeline view",
     "url": "/w/demo-workspace/cmvbj264y003tuklo3pnyyl7g",
-    "title": "Noema",
+    "title": "MVP Brain",
     "heading": "Product roadmap",
     "file": "docs/screenshots/13-db-timeline.png"
   },
@@ -107,7 +107,7 @@
     "name": "14-db-chart",
     "caption": "Database — chart view",
     "url": "/w/demo-workspace/cmvbj264y003tuklo3pnyyl7g",
-    "title": "Noema",
+    "title": "MVP Brain",
     "heading": "Product roadmap",
     "file": "docs/screenshots/14-db-chart.png"
   },
@@ -115,7 +115,7 @@
     "name": "15-db-list",
     "caption": "Database — list view",
     "url": "/w/demo-workspace/cmvbj264y003tuklo3pnyyl7g",
-    "title": "Noema",
+    "title": "MVP Brain",
     "heading": "Product roadmap",
     "file": "docs/screenshots/15-db-list.png"
   },
@@ -123,7 +123,7 @@
     "name": "16-db-calendar",
     "caption": "Database — calendar view",
     "url": "/w/demo-workspace/cmvbj2660004puklofwqz7khi",
-    "title": "Noema",
+    "title": "MVP Brain",
     "heading": "Task tracking",
     "file": "docs/screenshots/16-db-calendar.png"
   },
@@ -131,7 +131,7 @@
     "name": "17-db-gallery",
     "caption": "Database — gallery view with cover images",
     "url": "/w/demo-workspace/cmvbj268k0071uklo86cyuxys",
-    "title": "Noema",
+    "title": "MVP Brain",
     "heading": "Content calendar",
     "file": "docs/screenshots/17-db-gallery.png"
   },
@@ -139,7 +139,7 @@
     "name": "18-row-peek",
     "caption": "A row, opened in the side peek",
     "url": "/w/demo-workspace/cmvbj264y003tuklo3pnyyl7g",
-    "title": "Noema",
+    "title": "MVP Brain",
     "heading": "Product roadmap",
     "file": "docs/screenshots/18-row-peek.png"
   },
@@ -147,7 +147,7 @@
     "name": "19-tickets-list",
     "caption": "Tickets — list view with filters and saved views",
     "url": "/w/demo-workspace/tickets",
-    "title": "Tickets · Noema",
+    "title": "Tickets · MVP Brain",
     "heading": "Tickets",
     "file": "docs/screenshots/19-tickets-list.png"
   },
@@ -155,7 +155,7 @@
     "name": "20-tickets-board",
     "caption": "Tickets — board view",
     "url": "/w/demo-workspace/tickets",
-    "title": "Tickets · Noema",
+    "title": "Tickets · MVP Brain",
     "heading": "Tickets",
     "file": "docs/screenshots/20-tickets-board.png"
   },
@@ -163,7 +163,7 @@
     "name": "21-tickets-timeline",
     "caption": "Tickets — timeline view",
     "url": "/w/demo-workspace/tickets",
-    "title": "Tickets · Noema",
+    "title": "Tickets · MVP Brain",
     "heading": "Tickets",
     "file": "docs/screenshots/21-tickets-timeline.png"
   },
@@ -171,7 +171,7 @@
     "name": "22-ticket-drawer",
     "caption": "A ticket — description, activity, comments and linked work",
     "url": "/w/demo-workspace/tickets",
-    "title": "Tickets · Noema",
+    "title": "Tickets · MVP Brain",
     "heading": "Tickets",
     "file": "docs/screenshots/22-ticket-drawer.png"
   },
@@ -179,7 +179,7 @@
     "name": "23-cycles",
     "caption": "Cycles — burndown, scope and progress",
     "url": "/w/demo-workspace/cycles",
-    "title": "Cycles · Noema",
+    "title": "Cycles · MVP Brain",
     "heading": "Cycles",
     "file": "docs/screenshots/23-cycles.png"
   },
@@ -187,7 +187,7 @@
     "name": "24-projects",
     "caption": "Projects — progress, owners and target dates",
     "url": "/w/demo-workspace/projects",
-    "title": "Projects · Noema",
+    "title": "Projects · MVP Brain",
     "heading": "Projects",
     "file": "docs/screenshots/24-projects.png"
   },
@@ -195,7 +195,7 @@
     "name": "25-project",
     "caption": "A project — milestones and linked tickets",
     "url": "/w/demo-workspace/projects/cmvbj261z001duklosro2newh",
-    "title": "Project · Noema",
+    "title": "Project · MVP Brain",
     "heading": "🛰️ Atlas — web app v2.0",
     "file": "docs/screenshots/25-project.png"
   },
@@ -203,7 +203,7 @@
     "name": "26-library",
     "caption": "Library — every database in the workspace",
     "url": "/w/demo-workspace/library",
-    "title": "Library · Noema",
+    "title": "Library · MVP Brain",
     "heading": "Library",
     "file": "docs/screenshots/26-library.png"
   },
@@ -211,7 +211,7 @@
     "name": "27-search",
     "caption": "Search — full text, scoped to what you can see",
     "url": "/w/demo-workspace/search?q=editor",
-    "title": "Noema",
+    "title": "MVP Brain",
     "heading": "Search",
     "file": "docs/screenshots/27-search.png"
   },
@@ -219,7 +219,7 @@
     "name": "28-inbox",
     "caption": "Inbox — mentions, comments and updates",
     "url": "/w/demo-workspace/inbox",
-    "title": "Noema",
+    "title": "MVP Brain",
     "heading": "Inbox4",
     "file": "docs/screenshots/28-inbox.png"
   },
@@ -227,7 +227,7 @@
     "name": "29-chat",
     "caption": "Chat — a workspace conversation, with the notes it cites",
     "url": "/w/demo-workspace?chat=cmvbj271301dquklo9foe9y0n",
-    "title": "Noema",
+    "title": "MVP Brain",
     "heading": "Good morning, Demo",
     "file": "docs/screenshots/29-chat.png"
   },
@@ -235,7 +235,7 @@
     "name": "30-comments",
     "caption": "Comments and page discussion",
     "url": "/w/demo-workspace/cmvbj263j002ruklougtwtf3e",
-    "title": "Noema",
+    "title": "MVP Brain",
     "heading": "Spec: inline databases",
     "file": "docs/screenshots/30-comments.png"
   },
@@ -243,7 +243,7 @@
     "name": "31-versions",
     "caption": "Version history — every save, restorable",
     "url": "/w/demo-workspace/cmvbj263j002ruklougtwtf3e",
-    "title": "Noema",
+    "title": "MVP Brain",
     "heading": "Spec: inline databases",
     "file": "docs/screenshots/31-versions.png"
   },
@@ -251,7 +251,7 @@
     "name": "32-share",
     "caption": "Share — public link, permissions and export",
     "url": "/w/demo-workspace/cmvbj2631002hukloi0z5s75o",
-    "title": "Noema",
+    "title": "MVP Brain",
     "heading": "Getting started",
     "file": "docs/screenshots/32-share.png"
   },
@@ -259,7 +259,7 @@
     "name": "33-public-page",
     "caption": "A published page, as a visitor sees it",
     "url": "/s/demo-handbook-share",
-    "title": "Company handbook · Noema",
+    "title": "Company handbook · MVP Brain",
     "heading": "📘 Company handbook",
     "file": "docs/screenshots/33-public-page.png"
   },
@@ -267,7 +267,7 @@
     "name": "34-templates",
     "caption": "Templates — saved templates and the built-in library",
     "url": "/w/demo-workspace/templates",
-    "title": "Templates · Noema",
+    "title": "Templates · MVP Brain",
     "heading": "Templates",
     "file": "docs/screenshots/34-templates.png"
   },
@@ -275,7 +275,7 @@
     "name": "35-roadmap",
     "caption": "Roadmap — the workspace-level timeline",
     "url": "/w/demo-workspace/roadmap",
-    "title": "Roadmap · Noema",
+    "title": "Roadmap · MVP Brain",
     "heading": "Roadmap",
     "file": "docs/screenshots/35-roadmap.png"
   },
@@ -283,7 +283,7 @@
     "name": "36-audit",
     "caption": "Audit log — who changed what",
     "url": "/w/demo-workspace/audit",
-    "title": "Audit log · Noema",
+    "title": "Audit log · MVP Brain",
     "heading": "Activity",
     "file": "docs/screenshots/36-audit.png"
   },
@@ -291,7 +291,7 @@
     "name": "37-trash",
     "caption": "Trash — restore, or delete for good",
     "url": "/w/demo-workspace/trash",
-    "title": "Trash · Noema",
+    "title": "Trash · MVP Brain",
     "heading": "Trash",
     "file": "docs/screenshots/37-trash.png"
   },
@@ -299,7 +299,7 @@
     "name": "38-settings",
     "caption": "Settings — general, members, roles and invites",
     "url": "/w/demo-workspace/settings",
-    "title": "Noema",
+    "title": "MVP Brain",
     "heading": "Workspace settings",
     "file": "docs/screenshots/38-settings.png"
   },
@@ -307,7 +307,7 @@
     "name": "39-settings-tokens",
     "caption": "Settings — API tokens",
     "url": "/w/demo-workspace/settings/tokens",
-    "title": "API tokens · Noema",
+    "title": "API tokens · MVP Brain",
     "heading": "API tokens",
     "file": "docs/screenshots/39-settings-tokens.png"
   },
@@ -315,7 +315,7 @@
     "name": "40-settings-data",
     "caption": "Settings — data, export and privacy",
     "url": "/w/demo-workspace/settings/data",
-    "title": "Noema",
+    "title": "MVP Brain",
     "heading": "Data & privacy",
     "file": "docs/screenshots/40-settings-data.png"
   },
@@ -323,7 +323,7 @@
     "name": "41-settings-prompts",
     "caption": "Settings — the prompt library",
     "url": "/w/demo-workspace/settings/prompts",
-    "title": "Noema",
+    "title": "MVP Brain",
     "heading": "Prompt library",
     "file": "docs/screenshots/41-settings-prompts.png"
   },
@@ -331,7 +331,7 @@
     "name": "42-settings-notifications",
     "caption": "Settings — notification preferences",
     "url": "/w/demo-workspace/settings/notifications",
-    "title": "Notifications · Noema",
+    "title": "Notifications · MVP Brain",
     "heading": "Notifications",
     "file": "docs/screenshots/42-settings-notifications.png"
   },
@@ -339,7 +339,7 @@
     "name": "43-mobile-editor",
     "caption": "The same page on a phone viewport",
     "url": "/w/demo-workspace/cmvbj26430035ukloaxa7n387",
-    "title": "Noema",
+    "title": "MVP Brain",
     "heading": "Company handbook",
     "file": "docs/screenshots/43-mobile-editor.png"
   },
@@ -347,7 +347,7 @@
     "name": "44-about",
     "caption": "About — version, credits and licence, from Help → About",
     "url": "/w/demo-workspace",
-    "title": "Noema",
+    "title": "MVP Brain",
     "heading": "Good morning, Demo",
     "file": "docs/screenshots/44-about.png"
   }

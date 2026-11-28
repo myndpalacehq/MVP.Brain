@@ -85,7 +85,7 @@ export const AI_PROVIDERS: ProviderDefinition[] = [
     modelsUrl: "https://opencode.ai/inference/go/v1/models",
     // Only the models behind Go's OpenAI-compatible surface
     // (`/inference/go/openai/v1/chat/completions`) can be called at all: the
-    // Anthropic, Google and Responses models need a transport Noema does not
+    // Anthropic, Google and Responses models need a transport MVP Brain does not
     // speak. The live list holds more of them — those are not offered here.
     models: [
       { id: "glm-5.3-flash", label: "GLM-5.3 Flash" },

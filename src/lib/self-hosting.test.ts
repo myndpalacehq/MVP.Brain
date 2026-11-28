@@ -237,7 +237,7 @@ describe("checkReadiness", () => {
 
 describe("validateEnvFile", () => {
   const FILE = [
-    "# Noema environment",
+    "# MVP Brain environment",
     "",
     "DATABASE_URL=postgresql://noema:noema@localhost:5433/noema",
     'AUTH_SECRET="4f8a1c9e2b7d3056f8a1c9e2b7d3056f4f8a1c9e2b7d3056f8a1c9e2b7d3056f"',

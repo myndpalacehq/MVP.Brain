@@ -59,7 +59,7 @@ export default async function Home() {
   const user = await getCurrentUser();
   if (user) redirect("/app");
 
-  // The installed app is not a marketing surface. Someone who installed Noema
+  // The installed app is not a marketing surface. Someone who installed MVP Brain
   // wants either their workspace or, on a brand-new install, the "create your
   // account" form — never a landing page advertising features they already
   // downloaded. The site version deliberately keeps the landing page: its job
@@ -102,7 +102,7 @@ export default async function Home() {
             A local-first workspace for notes, docs and databases.
           </h1>
           <p className="mt-5 max-w-xl text-base leading-relaxed text-muted sm:text-lg">
-            Noema is an open-source alternative for teams and individuals who
+            MVP Brain is an open-source alternative for teams and individuals who
             want their workspace close to the data. Everything is a page —
             documents, folders and database rows share one model.
           </p>
@@ -151,7 +151,7 @@ export default async function Home() {
               height={900}
               priority
               sizes="(min-width: 1024px) 560px, 100vw"
-              alt="Noema's block editor showing a company handbook with a callout and a table of contents."
+              alt="MVP Brain's block editor showing a company handbook with a callout and a table of contents."
               className="block h-auto w-full"
             />
           </figure>
@@ -205,7 +205,7 @@ export default async function Home() {
             <p className="text-sm font-semibold">Bring your own infrastructure</p>
             <p className="mt-1 max-w-xl text-sm leading-relaxed text-muted">
               Postgres, local storage and optional AI providers are configured
-              by you. Noema does not require a hosted account to start.
+              by you. MVP Brain does not require a hosted account to start.
             </p>
           </div>
         </div>

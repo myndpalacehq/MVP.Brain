@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * Custom Notion-parity blocks for the Noema editor.
+ * Custom Notion-parity blocks for the MVP Brain editor.
  *
  * Each block is a TipTap node. Where the block needs interactive chrome
  * (emoji picker, collapse toggle, live heading outline) it uses a React node

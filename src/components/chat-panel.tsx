@@ -802,7 +802,7 @@ export const ChatMessageItem = forwardRef<HTMLLIElement, ChatMessageItemProps>(
           {isAssistant ? (
             <div className="flex items-center gap-1.5 pb-1 text-2xs text-muted">
               <Sparkles className="h-3 w-3 shrink-0 text-muted" aria-hidden />
-              <span className="font-medium text-fg">{meta?.model || modelLabel || "Noema AI"}</span>
+              <span className="font-medium text-fg">{meta?.model || modelLabel || "MVP Brain AI"}</span>
               {(meta?.activity?.length ?? 0) > 0 ? (
                 <Tag size="sm" hue="gray" className="min-w-0 max-w-[12rem]" title={meta?.activity?.join(", ")}>
                   {meta?.activity?.join(" · ")}

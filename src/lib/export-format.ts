@@ -217,7 +217,7 @@ export async function buildWorkspaceZip(options: WorkspaceZipOptions): Promise<B
     });
   }
 
-  zip.file("README.md", `# ${options.workspaceName}\n\nExported from Noema on ${exportedAt}.\n`);
+  zip.file("README.md", `# ${options.workspaceName}\n\nExported from MVP Brain on ${exportedAt}.\n`);
   zip.file(
     "manifest.json",
     JSON.stringify(

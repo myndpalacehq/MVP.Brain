@@ -1,5 +1,5 @@
 /**
- * Notion API → Noema document mapping (pure, no network).
+ * Notion API → MVP Brain document mapping (pure, no network).
  *
  * The `/v1/blocks/{id}/children` response is walked and converted into the
  * same ProseMirror/TipTap `doc` JSON the editor and importers use. Child

@@ -157,7 +157,7 @@ const HEADER_BYTES = BACKUP_MAGIC.length + SALT_BYTES + IV_BYTES + TAG_BYTES;
 
 /**
  * Why a sealed dump could not be opened:
- * - `malformed` — not a Noema envelope (wrong magic, truncated, too short);
+ * - `malformed` — not an MVP Brain envelope (wrong magic, truncated, too short);
  * - `auth-failed` — GCM auth-tag mismatch: wrong passphrase or a tampered
  *   payload.
  *
@@ -235,18 +235,18 @@ export function encryptBackup(plaintext, passphrase) {
 
 /**
  * Open a sealed dump. Throws {@link BackupDecryptError} — `malformed` when the
- * file is not a Noema envelope, `auth-failed` when the passphrase is wrong or
+ * file is not an MVP Brain envelope, `auth-failed` when the passphrase is wrong or
  * the payload was tampered with. Never returns partial plaintext.
  */
 export function decryptBackup(envelope, passphrase) {
   const raw = Buffer.isBuffer(envelope) ? envelope : Buffer.from(envelope ?? "");
   if (raw.length < HEADER_BYTES) {
-    throw new BackupDecryptError("malformed", "Not a Noema backup: the file is too short to be a sealed dump.");
+    throw new BackupDecryptError("malformed", "Not an MVP Brain backup: the file is too short to be a sealed dump.");
   }
   if (raw.subarray(0, BACKUP_MAGIC.length).toString("ascii") !== BACKUP_MAGIC) {
     throw new BackupDecryptError(
       "malformed",
-      "Not a Noema backup: the magic bytes are missing (a plain, unencrypted dump cannot be opened by this script).",
+      "Not an MVP Brain backup: the magic bytes are missing (a plain, unencrypted dump cannot be opened by this script).",
     );
   }
   let offset = BACKUP_MAGIC.length;

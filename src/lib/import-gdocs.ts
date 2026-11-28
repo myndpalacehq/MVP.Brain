@@ -1,5 +1,5 @@
 /**
- * Google Docs HTML export → Noema blocks.
+ * Google Docs HTML export → MVP Brain blocks.
  *
  * `parseGoogleDoc({ html })` is the pure, DOM-free front half of the Google
  * Docs importer: it turns the HTML Google Docs ("Download → Web page") and
@@ -19,7 +19,7 @@
  *   - tables → `table` / `tableRow` / `tableHeader` / `tableCell`
  *   - images → a link (`images as links`): the export either embeds a
  *     `data:` URI (Mammoth) or points at a `googleusercontent` URL, neither of
- *     which is a usable Noema image, so the image becomes a link paragraph
+ *     which is a usable MVP Brain image, so the image becomes a link paragraph
  *     labelled with its `alt` text (falling back to the `src`)
  *   - `<blockquote>`, `<hr>` and `<pre>` → `blockquote`, `horizontalRule`,
  *     `codeBlock`
@@ -70,7 +70,7 @@ export type GoogleDocMeta = {
 };
 
 export type GoogleDocImport = {
-  /** Top-level Noema blocks, ready to store as a document body. */
+  /** Top-level MVP Brain blocks, ready to store as a document body. */
   blocks: RichNode[];
   meta: GoogleDocMeta;
 };
@@ -315,7 +315,7 @@ const BLOCK_TAGS = new Set([
   "tr", "td", "th", "caption",
 ]);
 
-/** Element tags intentionally dropped (no Noema home) and reported in `meta.dropped`. */
+/** Element tags intentionally dropped (no MVP Brain home) and reported in `meta.dropped`. */
 const SKIP_TAGS = new Set([
   "video", "audio", "canvas", "embed", "input", "form", "select",
   "textarea", "button", "fieldset", "map", "area", "progress", "meter",
@@ -543,7 +543,7 @@ function emptyMeta(): GoogleDocMeta {
 
 /**
  * Parse a Google Docs HTML export (or Mammoth's `convertToHtml` output) into
- * Noema blocks plus an honest `meta` summary. Pure and total: malformed,
+ * MVP Brain blocks plus an honest `meta` summary. Pure and total: malformed,
  * hostile or missing input never throws, it degrades to whatever content can
  * still be read.
  */

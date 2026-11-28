@@ -464,10 +464,10 @@ export function buildSlackMessage(input: SlackMessageInput): SlackMessage {
 }
 
 /* ------------------------------------------------------------------ *
- * Noema event → message.
+ * MVP Brain event → message.
  * ------------------------------------------------------------------ */
 
-/** One Noema event worth announcing in Slack. */
+/** One MVP Brain event worth announcing in Slack. */
 export type NoemaSlackEvent =
   | {
       readonly kind: "comment";
@@ -511,7 +511,7 @@ function slackFallback(event: NoemaSlackEvent): string {
 }
 
 /**
- * Map a Noema event (comment / mention / ticket) to a validated Slack message:
+ * Map an MVP Brain event (comment / mention / ticket) to a validated Slack message:
  * a header, an escaped mrkdwn summary that links back to the page/ticket, an
  * optional context line (comment/mention body, ticket status + priority) and an
  * action button. All user text is escaped through `escapeMrkdwn`.

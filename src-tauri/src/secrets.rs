@@ -56,9 +56,12 @@ pub fn load(data_dir: &Path) -> Result<Secrets, String> {
     if raw.is_empty() {
         return Ok(Secrets::new());
     }
-    let payload = raw
-        .strip_prefix(MAGIC)
-        .ok_or_else(|| format!("{} does not look like a Noema secret store", file.display()))?;
+    let payload = raw.strip_prefix(MAGIC).ok_or_else(|| {
+        format!(
+            "{} does not look like an MVP Brain secret store",
+            file.display()
+        )
+    })?;
     let cleartext = unprotect(payload)
         .map_err(|error| format!("could not decrypt {}: {error}", file.display()))?;
     serde_json::from_slice(&cleartext)

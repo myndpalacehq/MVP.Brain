@@ -243,7 +243,7 @@ impl Readiness {
                  usually the database connection. Check the connection string below."
             ),
             Readiness::Foreign => {
-                "Another program is serving on this port — it is not the Noema server. \
+                "Another program is serving on this port — it is not the MVP Brain server. \
                  Quit that program and try again."
                     .to_string()
             }

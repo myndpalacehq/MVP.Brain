@@ -51,7 +51,7 @@ const warn = (label) => {
   console.log(`  warn  ${label}`);
 };
 
-console.log(`Noema desktop preflight — ${os}-${arch()}\n`);
+console.log(`MVP Brain desktop preflight — ${os}-${arch()}\n`);
 
 // 1. Node / npm.
 const node = process.versions.node;

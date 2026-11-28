@@ -1,5 +1,5 @@
 /**
- * Spreadsheet paste -> Noema table (feature F6).
+ * Spreadsheet paste -> MVP Brain table (feature F6).
  *
  * Copying a range out of Excel / Google Sheets puts *text/plain* on the
  * clipboard with tab-separated columns and newline-separated rows; a `.csv`

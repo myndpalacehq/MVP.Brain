@@ -1,4 +1,4 @@
-# Noema — Design System
+# MVP Brain — Design System
 
 The one place that defines *how things look and move*. Every component follows it;
 `check:coherence`, `src/lib/design-tokens.test.ts` and `npm run design:report`
@@ -52,7 +52,7 @@ Usage:
 
 The N mark is the product's identity, not a one-off glyph for the assistant.
 `components/brand/noema-mark.tsx` owns the measured letterform and
-`components/brand/noema-wordmark.tsx` owns the lockup (mark tile + `Noema`).
+`components/brand/noema-wordmark.tsx` owns the lockup (mark tile + `MVP Brain`).
 The public landing page, sign-in and sign-up all render the same lockup; the
 workspace itself keeps the workspace emoji as the primary identity. Do not
 recreate the mark with text, an emoji or a second SVG.

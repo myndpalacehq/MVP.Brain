@@ -1,4 +1,4 @@
-# Noema — Frontend Feature & Design Plan (A → Z)
+# MVP Brain — Frontend Feature & Design Plan (A → Z)
 
 > Status legend: **✅ have** · **🟡 partial / needs polish** · **⬜ to add**
 > Reference: Notion's web app. Goal: **smooth** (60 fps, no layout shift, everything

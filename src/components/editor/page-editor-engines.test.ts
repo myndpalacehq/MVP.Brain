@@ -37,7 +37,7 @@ describe("cleanClipboardHtml (paste-cleanup engine)", () => {
     expect(cleaned.html).toContain("<a>x</a>");
   });
 
-  it("keeps Noema block structure, colours and task state on a notion-fingerprinted copy", () => {
+  it("keeps MVP Brain block structure, colours and task state on a notion-fingerprinted copy", () => {
     // The editor's own BlockIds extension renders `data-block-id`, which
     // `detectSource` fingerprints as Notion — the style strip must NOT fire, or
     // an internal copy/paste would lose real text colour.

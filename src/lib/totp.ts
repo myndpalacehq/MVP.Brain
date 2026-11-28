@@ -117,7 +117,7 @@ export function verifyTotp(
 export function otpauthUrl(
   secret: string,
   account: string,
-  issuer = "Noema",
+  issuer = "MVP Brain",
 ): string {
   const label = encodeURIComponent(`${issuer}:${account}`);
   const params = new URLSearchParams({

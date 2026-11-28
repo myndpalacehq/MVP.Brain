@@ -10,7 +10,7 @@
  *
  * Only unsafe markup is stripped (script/style/iframe content, `on*`
  * handlers, `javascript:` urls, protocol-relative targets, non-whitelisted
- * CSS); structure and every Noema block attribute survive.
+ * CSS); structure and every MVP Brain block attribute survive.
  *
  * URLs are judged by the shared gates, not by a local copy: a link target
  * goes through `safeHref` (`@/lib/markdown`), a resource url through
@@ -162,7 +162,7 @@ function containsBlock(el: ElementNode): boolean {
 }
 
 function isInlineElement(el: ElementNode): boolean {
-  // A div is block-level in Noema only when it carries block semantics; a
+  // A div is block-level in MVP Brain only when it carries block semantics; a
   // plain wrapping div stays transparent either way.
   return !BLOCK_TAGS.has(el.tag) || el.tag === "div";
 }

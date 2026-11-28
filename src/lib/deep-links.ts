@@ -152,7 +152,7 @@ export function parseBlockDeepLink(link: string): BlockDeepLinkParseResult {
 
   const segments = path.split("/").filter((segment) => segment !== "");
   if (segments.length === 0 || segments[0] !== PREFIX_SEGMENT) {
-    return { ok: false, error: "not a Noema page link" };
+    return { ok: false, error: "not an MVP Brain page link" };
   }
   if (segments.length < 2) return { ok: false, error: "missing page id" };
 

@@ -13,7 +13,7 @@
 
 ## 1. Problem statement
 
-Noema already ships a **v1 of all three property types** — `RELATION`,
+MVP Brain already ships a **v1 of all three property types** — `RELATION`,
 `ROLLUP` and `FORMULA` exist in the `PropertyType` enum
 (`prisma/schema.prisma:45-47`), can be created (`src/server/actions/database.ts:74-85`),
 are configured from the column header menus, and evaluate in the browser. What

@@ -1,5 +1,5 @@
 /**
- * Noema's mark: the "N" monogram, drawn with the current text colour.
+ * MVP Brain's mark: the "N" monogram, drawn with the current text colour.
  *
  * The first version was a hand-written path spanning 11×11 in a 24×24 viewBox
  * with a 2.4 stroke, so on the 20px Ask-AI button the ink covered ~46% of the

@@ -85,7 +85,7 @@ function UnavailableState() {
           href="/"
           className="focus-ring u-interactive mt-4 inline-flex h-9 items-center justify-center rounded-control bg-action px-4 text-sm font-medium text-action-fg hover:opacity-90"
         >
-          Go to Noema
+          Go to MVP Brain
         </Link>
       </div>
     </main>
@@ -209,7 +209,7 @@ export default async function PublicSharedPage({
             </span>
             <span className="flex-1" />
             <span className="hidden text-xs text-muted sm:block">
-              Made with <span className="font-medium text-fg">Noema</span>
+              Made with <span className="font-medium text-fg">MVP Brain</span>
             </span>
             <CopyLinkButton
               value={`/s/${token}`}
@@ -267,7 +267,7 @@ export default async function PublicSharedPage({
           </span>
           <span className="flex-1" />
           <span className="hidden items-center gap-1 text-xs text-muted sm:flex">
-            Made with <span className="font-medium text-fg">Noema</span>
+            Made with <span className="font-medium text-fg">MVP Brain</span>
           </span>
           <CopyLinkButton value={`/s/${token}`} label="Copy link" iconOnly className="h-8 w-8" />
         </div>
@@ -304,7 +304,7 @@ export default async function PublicSharedPage({
                   <a href="/login" className="underline">
                     sign in
                   </a>{" "}
-                  to edit in Noema
+                  to edit in MVP Brain
                 </>
               )}
             </p>
@@ -318,7 +318,7 @@ export default async function PublicSharedPage({
           </header>
           <DocRenderer doc={page.content} />
           <footer className="mt-16 border-t border-border pt-4 text-xs text-muted print:hidden">
-            Shared with Noema · MIT-licensed open source
+            Shared with MVP Brain · MIT-licensed open source
           </footer>
         </article>
       </main>

@@ -80,7 +80,7 @@ export default async function WorkspaceHome({
           <section className="rounded-lg border border-border bg-surface p-4">
             <div className="flex flex-wrap items-start justify-between gap-3">
               <div>
-                <h2 className="text-base font-semibold">Get started with Noema</h2>
+                <h2 className="text-base font-semibold">Get started with MVP Brain</h2>
                 <p className="mt-1 text-sm text-muted">
                   {checklist.done} of {checklist.total} done — the fastest path to a
                   useful workspace.

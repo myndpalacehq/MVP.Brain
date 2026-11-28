@@ -76,9 +76,9 @@ export async function GET(request: Request) {
   });
 
   const feed = buildRssFeed({
-    title: workspace ? `Noema — ${workspace} updates` : "Noema — public updates",
+    title: workspace ? `MVP Brain — ${workspace} updates` : "MVP Brain — public updates",
     link: origin,
-    description: "Recently updated pages shared from this Noema workspace.",
+    description: "Recently updated pages shared from this MVP Brain workspace.",
     items,
   });
 

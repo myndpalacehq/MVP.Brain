@@ -20,7 +20,7 @@
 
 ## 1. Problem statement
 
-Noema's search **works and is fast**: a Postgres FTS pipeline (`Page.searchText`
+MVP Brain's search **works and is fast**: a Postgres FTS pipeline (`Page.searchText`
 mirror + GIN index + `ts_rank` + `ts_headline`) backs a search page with
 pagination and a ⌘K quick-find palette, all guest-scoped and e2e-locked. What
 it is not yet is Notion-class *finding*:
@@ -446,7 +446,7 @@ green (`package.json:33`).
 **Open questions**
 
 - **O78.1 — cross-workspace ("search everywhere").** Notion searches across
-  workspaces the user belongs to. Noema's palette is bound to one
+  workspaces the user belongs to. MVP Brain's palette is bound to one
   `workspaceId` (`workspace-shell.tsx:157-161`). This spec hardens *isolation*
   (R78.3) but defers multi-workspace search until a navigation row asks for it
   — needs a workspace switcher in the palette first (section-16 owner).

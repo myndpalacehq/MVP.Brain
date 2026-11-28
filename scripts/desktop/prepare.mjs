@@ -439,7 +439,7 @@ function copyNodeRuntime() {
       throw new Error(
         [
           `cannot replace the bundled runtime at ${target} — it is in use.`,
-          "Close the running Noema app (or any 'bundled server' smoke test) and retry.",
+          "Close the running MVP Brain app (or any 'bundled server' smoke test) and retry.",
         ].join("\n"),
       );
     }

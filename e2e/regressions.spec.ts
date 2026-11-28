@@ -372,14 +372,14 @@ test.describe("workspace regressions", () => {
     await expect
       .poll(
         async () => {
-          if (!/[?&]q=Noema/.test(page.url())) {
-            await input.fill("Noema");
+          if (!/[?&]q=MVP(\+|%20)Brain/.test(page.url())) {
+            await input.fill("MVP Brain");
           }
           return page.url();
         },
         { timeout: 15_000, intervals: [500] },
       )
-      .toMatch(/[?&]q=Noema/);
+      .toMatch(/[?&]q=MVP(\+|%20)Brain/);
   });
 
   test("tokens expose expiry presets and select-all", async ({ page }) => {

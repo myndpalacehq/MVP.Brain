@@ -86,7 +86,7 @@ function configureEnvSmtp() {
   process.env.SMTP_USER = "env-user";
   process.env.SMTP_PASSWORD = SMTP_PASSWORD_CANARY;
   process.env.SMTP_FROM = "noema@example.test";
-  process.env.SMTP_FROM_NAME = "Noema Env";
+  process.env.SMTP_FROM_NAME = "MVP Brain Env";
   process.env.SMTP_REPLY_TO = "support@example.test";
 }
 
@@ -279,7 +279,7 @@ describe("resolveMailConfig", () => {
       secure: true,
       username: "ws-user",
       password: "stored-pass-B88",
-      fromName: "Noema", // blank fromName falls back to the product name
+      fromName: "MVP Brain", // blank fromName falls back to the product name
       fromEmail: "ws@example.test",
       replyTo: "ws-reply@example.test",
       source: "workspace",
@@ -301,7 +301,7 @@ describe("resolveMailConfig", () => {
       secure: false, // SMTP_SECURE unset
       username: null,
       password: null,
-      fromName: "Noema",
+      fromName: "MVP Brain",
       fromEmail: "noema@example.test",
       replyTo: null,
       source: "env",
@@ -318,7 +318,7 @@ describe("resolveMailConfig", () => {
       secure: true,
       username: "env-user",
       password: SMTP_PASSWORD_CANARY,
-      fromName: "Noema Env",
+      fromName: "MVP Brain Env",
       fromEmail: "noema@example.test",
       replyTo: "support@example.test",
     });
@@ -402,7 +402,7 @@ describe("sendMail — configured transport", () => {
     expect(result).toEqual({ ok: true });
     expect(h.createTransport).toHaveBeenCalledTimes(1);
     expect(h.transport.sendMail).toHaveBeenCalledWith({
-      from: '"Noema Env" <noema@example.test>',
+      from: '"MVP Brain Env" <noema@example.test>',
       to: MSG.to,
       subject: MSG.subject,
       text: MSG.text,
@@ -436,7 +436,7 @@ describe("sendMail — configured transport", () => {
       secure: true,
       username: "ws-user",
       passwordEncrypted: encryptSecret("stored-pass-B88"),
-      fromName: "Noema",
+      fromName: "MVP Brain",
       fromEmail: "ws@example.test",
       replyTo: null,
     });
@@ -519,7 +519,7 @@ describe("verifyMail", () => {
       secure: false,
       username: null,
       passwordEncrypted: null,
-      fromName: "Noema",
+      fromName: "MVP Brain",
       fromEmail: "ws@example.test",
       replyTo: null,
     });

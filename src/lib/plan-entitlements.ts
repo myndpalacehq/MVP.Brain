@@ -1,5 +1,5 @@
 /**
- * Plan entitlements — the pure capability ladder behind Noema's four plans.
+ * Plan entitlements — the pure capability ladder behind MVP Brain's four plans.
  *
  * A workspace's plan (`free`, `plus`, `business`, `enterprise`) is a single
  * value that decides two different things:

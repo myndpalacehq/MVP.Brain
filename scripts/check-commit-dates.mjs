@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Gate: every commit must obey the Noema authoring-window policy.
+ * Gate: every commit must obey the MVP Brain authoring-window policy.
  *
  * Walks the commits of the ref under review — `HEAD` in a checkout, or the
  * revision range the caller names — and asserts that both the author date and

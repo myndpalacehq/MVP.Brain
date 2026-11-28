@@ -11,7 +11,7 @@
 
 ## 1. Problem statement
 
-Noema already ships a formula *engine*: `src/lib/formula.ts:1-261`, a
+MVP Brain already ships a formula *engine*: `src/lib/formula.ts:1-261`, a
 dependency-free whitelist parser (tokenizer + recursive descent, **no `eval` /
 no `Function`**) with 12 functions, and `src/lib/rollup.ts:1-111`, a 14-function
 aggregator. Both are pure and unit-tested (6 + 7 cases). What is missing is

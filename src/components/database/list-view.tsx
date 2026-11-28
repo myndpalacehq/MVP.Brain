@@ -367,7 +367,10 @@ export function ListView({
               >
                 <span className="w-4 text-center">{row.icon ?? "📄"}</span>
                 <span className="min-w-0 flex-1">
-                  <span className="block truncate text-sm">
+                  <span
+                    className="line-clamp-2 whitespace-normal break-words text-sm"
+                    title={model.primary || undefined}
+                  >
                     {model.primary || t(locale, "untitled")}
                   </span>
                   {model.expanded && !isCollapsed && model.secondary && (

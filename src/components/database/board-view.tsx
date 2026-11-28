@@ -516,7 +516,10 @@ export function BoardView({
           ...rowMotionStyle(motion),
         }}
       >
-        <p className="text-sm font-medium">
+        <p
+          className="line-clamp-2 whitespace-normal break-words text-sm font-medium"
+          title={row.title || undefined}
+        >
           {row.icon ? `${row.icon} ` : ""}
           {row.title || t(locale, "untitled")}
         </p>

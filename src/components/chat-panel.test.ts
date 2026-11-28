@@ -303,7 +303,7 @@ describe("renderToStaticMarkup — a user message", () => {
 
 describe("renderToStaticMarkup — an assistant message", () => {
   const meta: ChatMessageMeta = {
-    model: "Noema AI",
+    model: "MVP Brain AI",
     activity: ["read 2 notes"],
     contextTokens: 120,
     budgetTokens: 1024,
@@ -323,7 +323,7 @@ describe("renderToStaticMarkup — an assistant message", () => {
         meta,
         slug: "demo",
         locale: "en",
-        modelLabel: "Noema AI",
+        modelLabel: "MVP Brain AI",
         onCopy: () => {},
         onRegenerate: () => {},
       }),
@@ -391,13 +391,13 @@ describe("renderToStaticMarkup — the confirm button belongs to a stored propos
 describe("renderToStaticMarkup — typing indicator & empty state", () => {
   it("renders a three-dot status indicator", () => {
     const html = render(
-      createElement(TypingIndicator, { label: "Thinking…", modelLabel: "Noema AI" }),
+      createElement(TypingIndicator, { label: "Thinking…", modelLabel: "MVP Brain AI" }),
     );
     expect(html).toContain('data-testid="typing-indicator"');
     expect(html).toContain('role="status"');
     expect(html.match(/animate-pulse-soft/g)).toHaveLength(3);
     expect(html).toContain("Thinking…");
-    expect(html).toContain("Noema AI");
+    expect(html).toContain("MVP Brain AI");
   });
 
   it("renders an actionable empty state", () => {

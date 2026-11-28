@@ -139,7 +139,7 @@ describe("updateTicketAction milestone guard", () => {
  */
 describe("createTicketAction milestone guard", () => {
   beforeEach(() => {
-    db.workspace.findUnique.mockResolvedValue({ name: "Noema", ticketCounter: 7 });
+    db.workspace.findUnique.mockResolvedValue({ name: "MVP Brain", ticketCounter: 7 });
     db.workspace.update.mockResolvedValue({ ticketCounter: 8 });
     db.ticket.findFirst.mockResolvedValue(null);
     db.ticket.create.mockResolvedValue({ id: "t9", key: "NOE-8" });

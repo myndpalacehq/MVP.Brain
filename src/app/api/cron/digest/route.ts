@@ -263,7 +263,7 @@ async function runCron(request: Request) {
         heading: digest.subject,
         body: escapeHtml(digest.preview),
         ...(origin
-          ? { ctaLabel: "Open Noema", ctaUrl: origin }
+          ? { ctaLabel: "Open MVP Brain", ctaUrl: origin }
           : {}),
         footer: "You receive this because email digests are on for your account.",
       });

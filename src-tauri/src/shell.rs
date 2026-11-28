@@ -95,7 +95,7 @@ pub fn build_menu(app: &AppHandle) -> tauri::Result<Menu<tauri::Wry>> {
         // "About" sits in Help on every platform rather than in the macOS app
         // submenu: the credits should be one click away everywhere, and a
         // second platform-specific item is how the two menus drift apart.
-        .item(&MenuItemBuilder::with_id("about", "About Noema").build(app)?)
+        .item(&MenuItemBuilder::with_id("about", "About MVP Brain").build(app)?)
         .separator()
         .item(&MenuItemBuilder::with_id("check-update", "Check for updates…").build(app)?)
         .build()?;
@@ -107,7 +107,7 @@ pub fn build_menu(app: &AppHandle) -> tauri::Result<Menu<tauri::Wry>> {
     // message-less crash (0xC0000409) on a platform where the items make no
     // sense anyway.
     #[cfg(target_os = "macos")]
-    let app_menu = SubmenuBuilder::new(app, "Noema")
+    let app_menu = SubmenuBuilder::new(app, "MVP Brain")
         .item(&settings)
         .separator()
         .services()
@@ -211,7 +211,7 @@ fn set_zoom(app: &AppHandle, delta: f64) {
 /// The tray icon: the app's always-available entry point.
 pub fn build_tray(app: &AppHandle) -> tauri::Result<()> {
     let menu = MenuBuilder::new(app)
-        .item(&MenuItemBuilder::with_id("tray-show", "Open Noema").build(app)?)
+        .item(&MenuItemBuilder::with_id("tray-show", "Open MVP Brain").build(app)?)
         .item(&MenuItemBuilder::with_id("new-note", "New note").build(app)?)
         .item(&MenuItemBuilder::with_id("quick-find", "Quick find…").build(app)?)
         .separator()
@@ -219,12 +219,12 @@ pub fn build_tray(app: &AppHandle) -> tauri::Result<()> {
         .item(&MenuItemBuilder::with_id("open-data", "Open data folder").build(app)?)
         .separator()
         .item(&MenuItemBuilder::with_id("check-update", "Check for updates…").build(app)?)
-        .item(&MenuItemBuilder::with_id("quit", "Quit Noema").build(app)?)
+        .item(&MenuItemBuilder::with_id("quit", "Quit MVP Brain").build(app)?)
         .build()?;
 
     let mut tray = TrayIconBuilder::with_id("main")
         .icon_as_template(true)
-        .tooltip("Noema")
+        .tooltip("MVP Brain")
         .menu(&menu)
         .show_menu_on_left_click(false)
         .on_menu_event(|app, event| on_shell_command(app, event.id().as_ref()))

@@ -29,7 +29,7 @@
 
       function showFailure(message) {
         root.dataset.state = "failed";
-        title.textContent = "Noema could not start";
+        title.textContent = "MVP Brain could not start";
         lead.textContent =
           "The local server did not become ready. Check the database connection below, then retry.";
         detail.textContent = message || "";
@@ -38,7 +38,7 @@
 
       function showReady(info) {
         root.dataset.state = "ready";
-        title.textContent = "Noema is ready";
+        title.textContent = "MVP Brain is ready";
         lead.textContent = "Opening the workspace…";
         detail.textContent = "";
         if (info && info.api_base) window.location.replace(info.api_base);
@@ -56,7 +56,7 @@
               showFailure("The server stopped unexpectedly (code " + payload.code + ").");
             } else if (payload.kind === "starting") {
               root.dataset.state = "starting";
-              title.textContent = "Noema is starting…";
+              title.textContent = "MVP Brain is starting…";
             }
           }),
         ).catch(() => {});

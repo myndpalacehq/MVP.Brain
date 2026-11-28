@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 import { parseGoogleDoc } from "@/lib/import-gdocs";
 
 /**
- * Google Docs HTML export (and the docx-to-html output) -> Noema blocks.
+ * Google Docs HTML export (and the docx-to-html output) -> MVP Brain blocks.
  *
  * These tests pin the pure, dependency-free parse: block structure first, then
  * inline marks, links, lists, tables, the "image as link" rule, the metadata
@@ -163,7 +163,7 @@ describe("parseGoogleDoc — inline formatting", () => {
 });
 
 describe("parseGoogleDoc — lists", () => {
-  it("maps bullet and ordered lists to their Noema shapes", () => {
+  it("maps bullet and ordered lists to their MVP Brain shapes", () => {
     const { blocks, meta } = parse("<ul><li>alpha</li><li>beta</li></ul><ol><li>first</li></ol>");
     expect(blocks).toEqual([
       {

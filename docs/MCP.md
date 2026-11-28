@@ -1,6 +1,6 @@
 # MCP server
 
-Noema exposes a workspace over the Model Context Protocol at **`/api/mcp`**.
+MVP Brain exposes a workspace over the Model Context Protocol at **`/api/mcp`**.
 The server is read-first: read tools are available by default, write tools appear
 with `allowWrite=true`, and the destructive/admin surface is hidden until the
 caller opts in with `allowAdmin=true`.

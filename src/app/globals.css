@@ -213,6 +213,13 @@
    them (previously unlayered, which forced components into inline styles).
    --------------------------------------------------------------------------- */
 @layer base {
+/* Base text is 20% larger than the browser default (16px -> 19.2px). Every
+   rem-based size (Tailwind text-*, spacing, and the rem font sizes below)
+   scales with it. */
+html {
+  font-size: 120%;
+}
+
 html,
 body {
   height: 100%;
@@ -280,7 +287,7 @@ body {
   outline: none;
   min-height: 2rem;
   line-height: 1.65;
-  font-size: 16px;
+  font-size: 1rem;
   font-kerning: normal;
   word-break: break-word;
   caret-color: var(--fg);
@@ -444,7 +451,7 @@ body {
   background: var(--surface);
   color: var(--fg);
   font-family: var(--font-mono);
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.55;
   padding: var(--space-4) var(--space-4);
   border: 1px solid var(--border);
@@ -657,11 +664,11 @@ body {
   margin: 6px 0;
 }
 .noema-callout-emoji > button {
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 1.4;
 }
 .noema-callout-picker button {
-  font-size: 16px;
+  font-size: 1rem;
   padding: var(--space-1);
   border-radius: var(--radius-sm);
 }
@@ -765,7 +772,7 @@ body {
 .noema-toc button {
   padding: var(--space-0-5) var(--space-1);
   border-radius: var(--radius-sm);
-  font-size: 14px;
+  font-size: 0.875rem;
   color: var(--fg);
   text-align: start;
 }
@@ -879,7 +886,7 @@ body {
    --------------------------------------------------------------------------- */
 .noema-editor .ProseMirror .noema-breadcrumb {
   margin: 6px 0;
-  font-size: 13px;
+  font-size: 0.8125rem;
 }
 .noema-breadcrumb-item a {
   color: var(--muted);
@@ -965,7 +972,7 @@ body {
   background: var(--surface);
   color: var(--fg);
   font-family: var(--font-mono);
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.5;
   margin: 6px 0;
 }
@@ -1021,7 +1028,7 @@ body {
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
   background: var(--surface);
-  font-size: 13px;
+  font-size: 0.8125rem;
 }
 .noema-template-insert:hover {
   background: var(--surface-2);
@@ -1034,7 +1041,7 @@ body {
    Page settings (width / text size / font)
    --------------------------------------------------------------------------- */
 .noema-page-small .noema-editor .ProseMirror {
-  font-size: 14.5px;
+  font-size: 0.9062rem;
 }
 .noema-font-serif .noema-editor .ProseMirror,
 .noema-font-serif .noema-doc-renderer {
@@ -1271,7 +1278,7 @@ body {
   padding: 10px var(--space-3);
   overflow-x: auto;
   font-family: var(--font-mono);
-  font-size: 12.5px;
+  font-size: 0.7812rem;
   line-height: 1.55;
 }
 .notion-code pre code {
@@ -1284,7 +1291,7 @@ body {
 .notion-markdown table {
   border-collapse: collapse;
   width: 100%;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 .notion-markdown th,
 .notion-markdown td {
@@ -1727,14 +1734,14 @@ body {
   }
 @utility noema-toc-title{
   margin-bottom: 6px;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--muted);
   }
 @utility noema-toc-empty{
-  font-size: 14px;
+  font-size: 0.875rem;
   color: var(--muted);
   }
 @utility noema-row-chrome{
@@ -1781,7 +1788,7 @@ body {
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
   background: var(--bg);
-  font-size: 14px;
+  font-size: 0.875rem;
   outline: none;
   }
 @utility noema-embed-field{
@@ -1791,7 +1798,7 @@ body {
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
   background: var(--bg);
-  font-size: 14px;
+  font-size: 0.875rem;
   outline: none;
   }
 @utility noema-page-embed-field{
@@ -1801,7 +1808,7 @@ body {
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
   background: var(--bg);
-  font-size: 14px;
+  font-size: 0.875rem;
   outline: none;
   }
 @utility noema-bookmark-btn{
@@ -1809,7 +1816,7 @@ body {
   padding: 0 var(--space-3);
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
-  font-size: 14px;
+  font-size: 0.875rem;
   }
 @utility noema-bookmark-card{
   position: relative;
@@ -1838,7 +1845,7 @@ body {
   display: -webkit-box;
   overflow: hidden;
   color: var(--muted);
-  font-size: 13px;
+  font-size: 0.8125rem;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   }
@@ -1847,7 +1854,7 @@ body {
   align-items: center;
   gap: var(--space-1);
   color: var(--muted);
-  font-size: 12px;
+  font-size: 0.75rem;
   }
 @utility noema-bookmark-favicon{
   width: 16px;
@@ -1884,7 +1891,7 @@ body {
   }
 @utility noema-embed-hint{
   color: var(--muted);
-  font-size: 12px;
+  font-size: 0.75rem;
   }
 @utility noema-embed-frame{
   position: relative;
@@ -1898,7 +1905,7 @@ body {
   inset-inline-start: 8px;
   bottom: 8px;
   padding: var(--space-0-5) 6px;
-  font-size: 11px;
+  font-size: 0.6875rem;
   color: var(--muted);
   background: var(--bg);
   border: 1px solid var(--border);
@@ -1930,7 +1937,7 @@ body {
   gap: 6px;
   padding: 6px 10px;
   background: var(--surface);
-  font-size: 13px;
+  font-size: 0.8125rem;
   }
 @utility noema-page-embed-chevron{
   display: flex;
@@ -1958,7 +1965,7 @@ body {
   align-items: center;
   gap: 6px;
   color: var(--muted);
-  font-size: 13px;
+  font-size: 0.8125rem;
   }
 @utility noema-page-embed-picker{
   display: flex;
@@ -1975,11 +1982,11 @@ body {
   gap: var(--space-2);
   padding: 6px var(--space-2);
   border-radius: var(--radius-sm);
-  font-size: 14px;
+  font-size: 0.875rem;
   text-align: start;
   }
 @utility noema-doc-renderer{
-  font-size: 15px;
+  font-size: 0.9375rem;
   line-height: 1.6;
   }
 @utility noema-template-label{
@@ -1994,7 +2001,7 @@ body {
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   background: var(--bg);
-  font-size: 13px;
+  font-size: 0.8125rem;
   }
 @utility noema-template-insert{
   height: 26px;
@@ -2002,18 +2009,18 @@ body {
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   background: var(--bg);
-  font-size: 13px;
+  font-size: 0.8125rem;
   }
 @utility noema-template-remove{
   color: var(--muted);
   padding: 0 var(--space-1);
-  font-size: 15px;
+  font-size: 0.9375rem;
   }
 @utility noema-ask-head{
   display: flex;
   align-items: center;
   gap: 6px;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.04em;
@@ -2025,7 +2032,7 @@ body {
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
   background: var(--bg);
-  font-size: 14px;
+  font-size: 0.875rem;
   outline: none;
   }
 @utility noema-ask-actions{
@@ -2046,22 +2053,22 @@ body {
   border-radius: var(--radius-md);
   background: var(--bg);
   color: var(--fg);
-  font-size: 12px;
+  font-size: 0.75rem;
   }
 @utility noema-ask-source{
   display: inline-flex;
   align-items: center;
   gap: 4px;
   color: var(--muted);
-  font-size: 12px;
+  font-size: 0.75rem;
   }
 @utility noema-ask-pending{
   color: var(--muted);
-  font-size: 12px;
+  font-size: 0.75rem;
   }
 @utility noema-ask-error{
   color: var(--danger);
-  font-size: 13px;
+  font-size: 0.8125rem;
   }
 @utility noema-ask-btn{
   display: inline-flex;
@@ -2072,14 +2079,14 @@ body {
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
   background: var(--bg);
-  font-size: 13px;
+  font-size: 0.8125rem;
   }
 @utility noema-ask-icon{
   margin-inline-start: auto;
   color: var(--muted);
   }
 @utility noema-ask-answer{
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.6;
   border-top: 1px solid var(--border);
   padding-top: var(--space-2);
@@ -2090,7 +2097,7 @@ body {
   gap: 6px;
   padding: 6px 10px;
   background: var(--surface);
-  font-size: 13px;
+  font-size: 0.8125rem;
   }
 @utility noema-linked-title{
   flex: 1;
@@ -2116,19 +2123,19 @@ body {
   align-items: center;
   gap: 6px;
   color: var(--muted);
-  font-size: 13px;
+  font-size: 0.8125rem;
   }
 @utility noema-linked-empty{
   display: flex;
   align-items: center;
   gap: 6px;
   color: var(--muted);
-  font-size: 13px;
+  font-size: 0.8125rem;
   }
 @utility noema-linked-table{
   width: 100%;
   border-collapse: collapse;
-  font-size: 13px;
+  font-size: 0.8125rem;
   }
 @utility noema-linked-picker{
   display: flex;
@@ -2141,7 +2148,7 @@ body {
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
   background: var(--bg);
-  font-size: 14px;
+  font-size: 0.875rem;
   outline: none;
   }
 @utility noema-linked-results{
@@ -2154,11 +2161,11 @@ body {
   gap: var(--space-2);
   padding: 6px var(--space-2);
   border-radius: var(--radius-sm);
-  font-size: 14px;
+  font-size: 0.875rem;
   text-align: start;
   }
 @utility notion-markdown{
-  font-size: 15px;
+  font-size: 0.9375rem;
   line-height: 1.6;
   color: var(--fg);
   overflow-wrap: anywhere;
@@ -2176,7 +2183,7 @@ body {
   justify-content: space-between;
   padding: var(--space-1) 10px;
   border-bottom: 1px solid var(--border);
-  font-size: 11px;
+  font-size: 0.6875rem;
   color: var(--muted);
   }
 @utility notion-code-lang{
@@ -2238,7 +2245,7 @@ body {
   white-space: nowrap;
   }
 @utility notion-markdown-compact{
-  font-size: 14px;
+  font-size: 0.875rem;
   }
 @utility notion-empty{
   display: flex;
@@ -2248,7 +2255,7 @@ body {
   padding: var(--space-10) var(--space-4);
   text-align: center;
   color: var(--muted);
-  font-size: 14px;
+  font-size: 0.875rem;
   }
 @utility notion-empty-icon{
   display: grid;
@@ -2287,7 +2294,7 @@ body {
 @utility noema-image-caption{
   flex: 1;
   padding: var(--space-0-5) 6px;
-  font-size: 12px;
+  font-size: 0.75rem;
   color: var(--muted);
   background: transparent;
   border: 1px solid transparent;
@@ -2295,14 +2302,14 @@ body {
   outline: none;
   }
 @utility noema-image-alt-toggle{
-  font-size: 11px;
+  font-size: 0.6875rem;
   color: var(--muted);
   text-decoration: underline;
   }
 @utility noema-image-alt{
   width: 100%;
   padding: 3px 6px;
-  font-size: 12px;
+  font-size: 0.75rem;
   color: var(--fg);
   background: var(--bg);
   border: 1px solid var(--border);
@@ -2311,7 +2318,7 @@ body {
   }
 @utility noema-image-caption-view{
   margin: var(--space-1) 0 0;
-  font-size: 12px;
+  font-size: 0.75rem;
   color: var(--muted);
   text-align: center;
   }

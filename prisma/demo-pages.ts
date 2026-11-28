@@ -1049,9 +1049,9 @@ export const pageSpecs: PageSpec[] = [
       table(
         [[bold("Job")], [bold("Tool")], [bold("Owner")], [bold("Notes")]],
         [
-          [[text("Docs & databases")], [text("Noema")], [text("Everyone")], [text("The one we build")]],
-          [[text("Tickets")], [text("Noema tickets")], [text("Louis")], [text("Cycles, labels, estimates")]],
-          [[text("Chat")], [text("Noema chat")], [text("Everyone")], [text("Threads per topic")]],
+          [[text("Docs & databases")], [text("MVP Brain")], [text("Everyone")], [text("The one we build")]],
+          [[text("Tickets")], [text("MVP Brain tickets")], [text("Louis")], [text("Cycles, labels, estimates")]],
+          [[text("Chat")], [text("MVP Brain chat")], [text("Everyone")], [text("Threads per topic")]],
           [[text("Source")], [text("GitHub")], [text("Tomás")], [text("Trunk-based, review required")]],
           [[text("Design")], [text("Figma")], [text("Priya")], [text("One file per project")]],
         ],

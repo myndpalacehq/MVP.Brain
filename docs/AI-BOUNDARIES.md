@@ -1,6 +1,6 @@
 # AI data boundaries
 
-> Status: implemented policy (R25.8, R25.15). This document describes what Noema
+> Status: implemented policy (R25.8, R25.15). This document describes what MVP Brain
 > does with workspace content when AI is configured, and points at the code
 > that enforces each guarantee. Marketing language is not the source of truth
 > here — the tests in `src/lib/ai-boundary.test.ts` and the traffic paths in
@@ -8,13 +8,13 @@
 
 ## 1. The short version
 
-- Noema is **bring-your-own-provider**. A workspace stores its own endpoint,
+- MVP Brain is **bring-your-own-provider**. A workspace stores its own endpoint,
   model and (for remote providers) key. The server calls that endpoint
-  directly; Noema has no inference proxy in the middle.
+  directly; MVP Brain has no inference proxy in the middle.
 - **Prompts and completions are not written to application logs by default.**
   The AI logging sink accepts diagnostic metadata only and drops payload-shaped
   fields before they reach `console`.
-- **Noema adds no training and no telemetry forwarding** to the AI transport.
+- **MVP Brain adds no training and no telemetry forwarding** to the AI transport.
   There is no analytics SDK call beside a model call, and no code path sends a
   prompt anywhere except the workspace's configured endpoint.
 - **Local endpoints are local-only.** When the effective base URL is loopback or
@@ -29,7 +29,7 @@
 
 ## 2. What each surface sends
 
-| Surface | Code | Content sent | Stored by Noema |
+| Surface | Code | Content sent | Stored by MVP Brain |
 | --- | --- | --- | --- |
 | Chat (stream) | `src/app/api/chat/stream/route.ts`, `src/lib/chat-runtime.ts` | System prompt, the user turn (≤ 4,000 chars), and grounded workspace context assembled by `src/lib/chat-context.ts` / `src/lib/retrieval.ts` | `ChatMessage` rows (the conversation itself), with `meta.model`/`meta.provider` |
 | Ask / summarize / autofill | `src/app/api/ai/route.ts` | System instruction, question/prompt (≤ 4,000 chars), optional context (≤ 8,000 chars) | Nothing beyond the values the user's action already stores; autofill writes the cell |
@@ -73,7 +73,7 @@ disable request-body logging at that layer as well.
 
 ## 4. Training and telemetry
 
-**Guarantee:** Noema does not train on workspace content and does not forward it
+**Guarantee:** MVP Brain does not train on workspace content and does not forward it
 to analytics or telemetry. The only outbound AI calls are the model calls the
 user's action triggered.
 
@@ -92,7 +92,7 @@ user's action triggered.
 - A static test rejects analytics/telemetry hosts in the AI source paths.
 
 What a third-party provider does with a request *after* it receives it is
-governed by that provider's terms, not by Noema. Choosing a provider — and its
+governed by that provider's terms, not by MVP Brain. Choosing a provider — and its
 data-processing terms — is the workspace admin's decision. This is exactly why
 the local option exists.
 
@@ -112,8 +112,8 @@ and completion stays on the operator's own machine or private network.
   (`src/lib/ai-boundary.ts`) derive the scope from the effective base URL.
 - The settings screen shows “Local-only processing” from that same classifier
   and explains whether the key is optional.
-- The request is issued by the Noema server directly to the workspace's
-  endpoint. There is no Noema-hosted relay, so “local endpoint” means the bytes
+- The request is issued by the MVP Brain server directly to the workspace's
+  endpoint. There is no MVP Brain-hosted relay, so “local endpoint” means the bytes
   do not leave the operator's network.
 
 A persisted workspace-level “local-only” *switch* (as opposed to the
@@ -152,7 +152,7 @@ column on `AiProviderConfig` (it is already one row per workspace) such as
   and a code.
 - Transcription audio is held in the request only for the duration of the
   upstream call and is not written to storage by the route.
-- Noema adds no prompt library, cache or vector store that duplicates workspace
+- MVP Brain adds no prompt library, cache or vector store that duplicates workspace
   content for model use; retrieval stays lexical over the workspace's own
   pages.
 
@@ -184,14 +184,14 @@ The tests cover:
 
 1. **No persisted local-only switch.** See §5: this needs a schema column; the
    current guarantee is derived from the endpoint.
-2. **Third-party provider retention/training terms are outside Noema.** Use a
+2. **Third-party provider retention/training terms are outside MVP Brain.** Use a
    local endpoint when the content cannot leave the network.
 3. **Operator infrastructure logs** (proxy, platform, APM) can still capture
-   request metadata unless the operator configures them. Noema does not add
+   request metadata unless the operator configures them. MVP Brain does not add
    body logging, but it cannot remove someone else's.
 4. **Usage/budget accounting is in-process** (`src/lib/ai-cost.ts`) until a
    durable usage table lands; that is a cost control, not a data-boundary
    control.
-5. **BYO-key means the workspace supplies the credential.** Noema never ships a
-   shared inference key, so a provider cannot attribute traffic to a Noema
+5. **BYO-key means the workspace supplies the credential.** MVP Brain never ships a
+   shared inference key, so a provider cannot attribute traffic to an MVP Brain
    account.

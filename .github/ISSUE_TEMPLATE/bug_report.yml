@@ -52,7 +52,7 @@ body:
   - type: input
     id: noema-version
     attributes:
-      label: Noema version
+      label: MVP Brain version
       placeholder: "0.1.0"
     validations:
       required: false

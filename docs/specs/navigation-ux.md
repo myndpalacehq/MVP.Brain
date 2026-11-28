@@ -13,7 +13,7 @@
 
 ## 1. Problem statement
 
-Noema navigates exactly like a server-rendered site: one page on screen, the
+MVP Brain navigates exactly like a server-rendered site: one page on screen, the
 browser's own back button, and no way to keep a second page open. Four
 navigation affordances that the product class ships are missing or only
 half-built:

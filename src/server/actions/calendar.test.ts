@@ -62,7 +62,7 @@ import {
 const FEED = [
   "BEGIN:VCALENDAR",
   "VERSION:2.0",
-  "PRODID:-//Noema//Test//EN",
+  "PRODID:-//MVP Brain//Test//EN",
   "BEGIN:VEVENT",
   "UID:evt-1@noema",
   "SUMMARY:Weekly sync",

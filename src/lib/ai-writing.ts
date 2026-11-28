@@ -59,7 +59,7 @@ export const SKILL_DEFAULT_PARAMS: Record<AiWritingKind, PromptParams> = {
 const MAX_TOKENS_CAP = 4096;
 
 const BASE_SYSTEM =
-  "You are Noema's writing assistant. Follow the instruction exactly and return only the requested output.";
+  "You are MVP Brain's writing assistant. Follow the instruction exactly and return only the requested output.";
 
 const LOCALE_ENGLISH_NAMES: Record<LocaleCode, string> = SKILL_LOCALE_NAMES;
 

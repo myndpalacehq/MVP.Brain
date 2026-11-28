@@ -179,7 +179,7 @@ pub fn set_pref(app: AppHandle, key: String, value: serde_json::Value) {
 #[tauri::command]
 pub fn set_window_title(app: AppHandle, title: String) {
     if let Some(window) = app.get_webview_window("main") {
-        let _ = window.set_title(&format!("{} - Noema", window_title(&title)));
+        let _ = window.set_title(&format!("{} - MVP Brain", window_title(&title)));
     }
 }
 

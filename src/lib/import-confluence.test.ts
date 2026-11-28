@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 import { parseConfluenceExport, type ConfluencePage } from "./import-confluence";
 
 /**
- * Confluence HTML export → Noema page tree (pure parser).
+ * Confluence HTML export → MVP Brain page tree (pure parser).
  *
  * Red-first: this file was written BEFORE `src/lib/import-confluence.ts`
  * existed, so every import resolved to module-not-found and the suite failed

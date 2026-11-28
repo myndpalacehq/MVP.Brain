@@ -123,7 +123,7 @@ test.describe("sharing parity", () => {
     await expect(dialog.getByText("Only people with access can open this link")).toBeVisible();
     await dialog.getByRole("button", { name: "Publish" }).click();
 
-    // Published: the link is public and read-only by design. (Noema does not
+    // Published: the link is public and read-only by design. (MVP Brain does not
     // expose an anonymous edit mode; editors sign in to their workspace.)
     await expect(dialog.getByText("Anyone with the link")).toBeVisible({
       timeout: 60_000,

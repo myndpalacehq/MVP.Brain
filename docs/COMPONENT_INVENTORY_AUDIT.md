@@ -1,4 +1,4 @@
-# Noema Component Inventory & Visual Audit
+# MVP Brain Component Inventory & Visual Audit
 
 > Local audit generated from the source on 2026-10-23. The follow-up implementation was applied locally; nothing was committed or pushed, and no production data was modified.
 

@@ -1,4 +1,4 @@
-# Noema — Desktop (installable app) & Site (hosted) versions
+# MVP Brain — Desktop (installable app) & Site (hosted) versions
 
 One codebase, two shipped products:
 
@@ -26,7 +26,7 @@ Only four things differ, and they are resolved in **one module**
 
 ```
 ┌───────────────────────────────────────────────────────────────┐
-│ Noema.exe / Noema.app                      (Rust, tauri 2)    │
+│ MVP Brain.exe / MVP Brain.app                      (Rust, tauri 2)    │
 │                                                               │
 │  window (WebView2 / WKWebView / WebKitGTK)                    │
 │    ▲  navigation: shell origin + this exact 127.0.0.1:<port>  │
@@ -567,7 +567,7 @@ CLI, and a Node runtime. **Nothing has to be installed first.**
 
 First run:
 
-1. The window opens immediately on the shell's own page ("Noema is starting…").
+1. The window opens immediately on the shell's own page ("MVP Brain is starting…").
 2. The bundled server starts on a loopback port and migrates the database.
 3. As soon as `/api/health` answers 200 the window swaps to your workspace.
 
@@ -596,7 +596,7 @@ NOEMA_ALLOW_LOOPBACK_TARGETS  1 = allow an outbound webhook to point at the
 `HOSTNAME` is **not** honoured by the desktop boot wrapper: a value inherited
 from a shell or service manager cannot make the server bind beyond loopback.
 
-Uninstall: **Settings → Apps → Noema → Uninstall**, or the `uninstall.exe` in the
+Uninstall: **Settings → Apps → MVP Brain → Uninstall**, or the `uninstall.exe` in the
 install directory. Your data directory is left behind on purpose.
 
 ### A local database in one line
@@ -645,7 +645,7 @@ key out of the tree it ships.
 
 | Symptom | Cause | Fix |
 |---|---|---|
-| Window stays on "Noema is starting…" | server not ready | open **Advanced: database connection**, paste a working `DATABASE_URL`, **Save & restart**; **Copy diagnostics** pastes a redacted report |
+| Window stays on "MVP Brain is starting…" | server not ready | open **Advanced: database connection**, paste a working `DATABASE_URL`, **Save & restart**; **Copy diagnostics** pastes a redacted report |
 | `prisma migrate deploy` fails | database missing or unreachable | create the database (e.g. `docker run -e POSTGRES_PASSWORD=postgres -p 5432:5432 postgres:16-alpine`) or point the app at an existing one |
 | `prepare` refuses to stage: "incomplete payload" | a site build replaced `.next/` | rebuild the payload (no `NOEMA_SKIP_BUILD=1`), and never run the two builds together |
 | App starts and dies instantly, no window | a Rust panic — `panic = "abort"` makes it silent | read `%TEMP%\noema-panic.log` (also written to `<data dir>/logs/panic.log`); the shell installs a panic hook precisely so this is never traceless |
@@ -670,7 +670,7 @@ below was executed, not inferred.
 | `npm run desktop:prepare` | 369.0 MB payload staged and validated |
 | `npm run desktop:smoke` | boots the packaged payload on the bundled runtime, migrates, serves `/api/health` 200 and `/login` 200 |
 | `cargo tauri build` | `Noema_1.4.3_x64-setup.exe` (~78 MiB) + `Noema_1.4.3_x64_en-US.msi` (~138 MiB) |
-| **Installed the NSIS installer** | exit 0, per-user, **no admin prompt** → `%LOCALAPPDATA%\Noema\` + Start Menu shortcut + `uninstall.exe` |
+| **Installed the NSIS installer** | exit 0, per-user, **no admin prompt** → `%LOCALAPPDATA%\MVP Brain\` + Start Menu shortcut + `uninstall.exe` |
 | **Launched the installed app** | supervised server on a loopback port, `/api/health → 200 {"ok":true,"db":"up"}`, `/login → 200` (16,903 bytes) |
 | **Relaunched the installed app** | same loopback port (61621 → 61621), so the app's browser-side state survives a restart; with that port occupied it logs `port 61621 is in use, serving on 62537 instead` and re-points the preference |
 | **Launched with no env vars at all** | `db: up` from `preferences.json`, and the shell created `logs/ uploads/ backups/` |

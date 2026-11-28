@@ -41,7 +41,7 @@ const errorMessage = (error: unknown, fallback: string) =>
 
 /**
  * Distinct Notion block/property type coverage for an import: how many types
- * have a Noema equivalent and which have none. Computed through the vocabulary
+ * have an MVP Brain equivalent and which have none. Computed through the vocabulary
  * layer (`src/lib/import-notion-map.ts`) so the server reports the same loss
  * the client preview shows, instead of silently dropping content.
  */
@@ -63,7 +63,7 @@ function distinctTypes(types: readonly unknown[]): string[] {
 }
 
 /**
- * Report/count the Notion types in an import that have no Noema mapping, using
+ * Report/count the Notion types in an import that have no MVP Brain mapping, using
  * the shared vocabulary layer (`mapNotionBlockType` / `mapNotionPropertyType` /
  * `unmappedBlocks`). Purely additive and total: unknown or malformed input
  * degrades to an empty summary rather than throwing.
@@ -499,7 +499,7 @@ export async function importZipAction(formData: FormData): Promise<ImportResult>
   if (!workspace) return { error: "Workspace not found." };
 
   // m30: report which Notion block/property types in a Notion/pages export
-  // have no Noema mapping. Additive: without the optional type hints (the
+  // have no MVP Brain mapping. Additive: without the optional type hints (the
   // sidebar sends none) the summary is empty and the import is unchanged.
   const unmapped = summarizeNotionMapping(
     readTypeHints(formData, "blockTypes"),

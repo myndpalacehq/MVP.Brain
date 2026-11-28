@@ -10,7 +10,7 @@
 
 ## 1. Problem statement
 
-Noema already ships a working AI surface family: a docked chat panel with a
+MVP Brain already ships a working AI surface family: a docked chat panel with a
 streaming answer path, seven editor skills, an Ask AI block, per-workspace
 provider configuration with an encrypted key, an ask/summarize/autofill proxy,
 and speech-to-text. But the surface is uneven in ways a Notion user notices

@@ -457,7 +457,7 @@ export function ShareDialog({
                         <a href="/login" className="underline">
                           {t(locale, "signIn")}
                         </a>{" "}
-                        to edit in Noema
+                        to edit in MVP Brain
                       </span>
                     </span>
                   </span>

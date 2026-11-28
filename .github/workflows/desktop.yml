@@ -353,7 +353,7 @@ jobs:
         with:
           args: --target ${{ matrix.rust-target }} --bundles ${{ matrix.bundles }}
           tagName: ${{ github.ref_name }}
-          releaseName: ${{ format('Noema {0}', github.ref_name) }}
+          releaseName: ${{ format('MVP Brain {0}', github.ref_name) }}
           releaseDraft: true
           prerelease: false
           includeUpdaterJson: false

@@ -5,7 +5,7 @@
  * The read-only renderer used to emit the stored `src` verbatim, so a picture
  * on ANY host was fetched BY THE VISITOR'S BROWSER when they opened a shared
  * page. That request handed the host the visitor's IP address - and the
- * `Referer` of the share page, which tells the host which Noema instance the
+ * `Referer` of the share page, which tells the host which MVP Brain instance the
  * visitor came from (and, for a same-origin picture, the whole URL with the
  * share token in it).
  *

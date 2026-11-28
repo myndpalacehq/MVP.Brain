@@ -18,7 +18,7 @@
  * 3. **Local-only processing is a fact of the endpoint.** When the effective
  *    base URL is loopback/private, the request cannot leave the operator's
  *    network; `aiProcessingScope` reports that and the settings UI shows it.
- *    No Noema server sits in the path of a workspace's provider call.
+ *    No MVP Brain server sits in the path of a workspace's provider call.
  *
  * The module is pure except for the explicit `logAiDiagnostic` sink and the
  * two environment readers, so the guarantees are unit-testable.
@@ -40,9 +40,9 @@ export const AI_BOUNDARY_POLICY = {
   promptLogging: false,
   /** Completions are not written to logs unless the operator opts in. */
   responseLogging: false,
-  /** Training on workspace content is never enabled by Noema itself. */
+  /** Training on workspace content is never enabled by MVP Brain itself. */
   providerTraining: false,
-  /** Noema adds no analytics/telemetry call to any AI transport. */
+  /** MVP Brain adds no analytics/telemetry call to any AI transport. */
   telemetryForwarding: false,
   /** Keys are encrypted at rest and never returned to clients. */
   keysAtRest: "AES-256-GCM",
@@ -135,7 +135,7 @@ export function localOnlyProcessingGuaranteed(baseUrl: string | null | undefined
 export function providerBoundary(provider: string): ProviderBoundary {
   return {
     name: (provider ?? "").trim() || "unknown",
-    // Noema itself never trains. An operator may declare that the endpoint
+    // MVP Brain itself never trains. An operator may declare that the endpoint
     // they chose does; the guard then refuses it unless they also opt in.
     trainsOnData: process.env.AI_PROVIDER_TRAINS_ON_DATA === "true",
   };

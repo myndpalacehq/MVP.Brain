@@ -123,7 +123,7 @@ export async function inviteTeamspaceMemberAction(input: {
     heading: `You're invited to ${escapeHtml(auth.teamspace.name)}`,
     body: `${escapeHtml(auth.user.name)} added you to the <strong>${escapeHtml(
       auth.teamspace.name,
-    )}</strong> teamspace on Noema. This link expires in ${INVITE_TTL_DAYS} days.`,
+    )}</strong> teamspace on MVP Brain. This link expires in ${INVITE_TTL_DAYS} days.`,
     ctaLabel: "Join teamspace",
     ctaUrl: `${await appOrigin()}${link}`,
   });

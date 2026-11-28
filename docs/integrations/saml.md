@@ -1,6 +1,6 @@
 # SAML 2.0 SSO setup
 
-Noema supports an **env-level SAML 2.0 connection** next to the existing
+MVP Brain supports an **env-level SAML 2.0 connection** next to the existing
 env-level OIDC connection. One deployment has one SAML IdP. Per-workspace
 connections, group→role mapping, verified-domain auto-join and SCIM are not
 implemented yet (see `docs/specs/saml-sso.md`).

@@ -1,28 +1,35 @@
 <div align="center">
 
-# Noema
+# MVP Brain
 
-**A local-first workspace for notes, docs and databases.**
+**A lead-generation workspace that Claude Code can work in.**
 
-An original, open-source, self-hosted alternative to Notion — for teams and
-individuals. Everything is a page: documents, folders and database rows share
-one model. It runs on your machine, it is yours to extend, and it also ships as
-a desktop app that needs nothing else installed.
+Track leads,
+companies, outreach and follow-ups as databases, run the pipeline on a board,
+and let Claude Code find, qualify and update leads for you through the built-in
+MCP server. Everything is a page: documents, folders and database rows share
+one model. It is open source, runs on your machine, and also ships as a desktop
+app that needs nothing else installed.
 
-<!-- Every link points at the canonical repository, https://github.com/Guembri01/noema.
-     `src/lib/project-info.ts` holds the URL the app uses; keep the two in step. -->
+<!-- The app's repository URL lives in `src/lib/project-info.ts`; keep it in step with these links. -->
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
-[![CI](https://github.com/Guembri01/noema/actions/workflows/ci.yml/badge.svg)](https://github.com/Guembri01/noema/actions/workflows/ci.yml)
+[![CI](https://github.com/myndpalacehq/MVP.Brain/actions/workflows/ci.yml/badge.svg)](https://github.com/myndpalacehq/MVP.Brain/actions/workflows/ci.yml)
 [![Next.js 15](https://img.shields.io/badge/Next.js-15-black.svg)](https://nextjs.org)
 [![Node 24](https://img.shields.io/badge/node-%E2%89%A524-brightgreen.svg)](./.nvmrc)
 [![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](./CONTRIBUTING.md)
 
-[![The Noema landing page](./docs/screenshots/01-landing.png)](./docs/screenshots/01-landing.png)
+[![The MVP Brain landing page](./docs/screenshots/01-landing.png)](./docs/screenshots/01-landing.png)
 
 </div>
 
-> **Notion is a trademark of its respective owner.** Noema is not affiliated
+> **MVP Brain is a fork of [Noema](https://github.com/Guembri01/noema)** by
+> Bilel Guembri and Wissal Ben Othmen, used under the MIT License. The original
+> authors' copyright is kept in [`LICENSE`](./LICENSE). MVP Brain is maintained
+> separately, and the Noema authors have not reviewed or endorsed this fork.
+> Links to the demo film below point at the original Noema release.
+
+> **Notion is a trademark of its respective owner.** MVP Brain is not affiliated
 > with, endorsed by, or derived from Notion's source code, assets or
 > trademarks. It implements the same *category* of product from publicly
 > documented behaviour only. See [Notice](#notice).
@@ -30,7 +37,7 @@ a desktop app that needs nothing else installed.
 - **Stack:** Next.js 15 (App Router) · React 19 · TypeScript · Tailwind CSS v4 · Prisma 6 · PostgreSQL (docker container `noema-db`, port **5433**) · TipTap · Tauri 2 for the desktop app
 - **Runs locally:** one `docker compose up` for the database, one `npm run dev` for the app.
 - **Runs as an app:** one installer — no Postgres, no Docker, no account. See [Desktop app](#desktop-app).
-- **License:** MIT · **Built by** [Bilel Guembri and Wissal Ben Othmen](#authors)
+- **License:** MIT · **Based on** [Noema](https://github.com/Guembri01/noema) by [Bilel Guembri and Wissal Ben Othmen](#authors)
 
 ---
 
@@ -45,9 +52,27 @@ a desktop app that needs nothing else installed.
 | [Demo](#demo) — the two-minute product film | [Contributing](#contributing) · [Security](#security) |
 | [Screenshots](#screenshots) — the interface at a glance | [Authors](#authors) · [License](#license) |
 
+## Lead generation with Claude Code
+
+MVP Brain's focus is lead generation. Keep a **Leads** database (name, company,
+source, stage, owner, last contacted, next follow-up), view it as a board by
+stage, and connect Claude Code so it can work the pipeline with you:
+
+```bash
+claude mcp add --transport http mvp-brain \
+  "http://127.0.0.1:53021/api/mcp?workspaceId=<workspace-id>&allowWrite=true" \
+  --header "Authorization: Bearer <api-token>"
+```
+
+Create the token under **Workspace settings → API tokens**. Then ask Claude Code
+things like "which leads haven't been contacted in two weeks?", "add these ten
+companies as new leads" or "move everyone who replied to Qualified". The tools
+are listed in [`docs/MCP.md`](./docs/MCP.md). The in-app chat assistant knows
+the workspace is lead-gen focused too.
+
 ## Demo
 
-[![Noema in motion — the editor, database views, tickets, cycles, chat and the desktop build](./docs/Noema-demo-preview.gif)](https://github.com/Guembri01/noema/releases/latest/download/Noema-demo.mp4)
+[![MVP Brain in motion — the editor, database views, tickets, cycles, chat and the desktop build](./docs/Noema-demo-preview.gif)](https://github.com/Guembri01/noema/releases/latest/download/Noema-demo.mp4)
 
 **[▶ Watch the two-minute product film](https://github.com/Guembri01/noema/releases/latest/download/Noema-demo.mp4)** — one pass over
 every area: the block editor, eight database views, conditional formatting,
@@ -139,7 +164,7 @@ account.
 
 | | |
 | --- | --- |
-| **Install** | The NSIS installer (`Noema_1.4.3_x64-setup.exe`) installs per user into `%LOCALAPPDATA%\Noema`, and uninstalls from Add/Remove programs. WebView2 is bootstrapped by the installer itself |
+| **Install** | The NSIS installer (`Noema_1.4.3_x64-setup.exe`) installs per user into `%LOCALAPPDATA%\MVP Brain`, and uninstalls from Add/Remove programs. WebView2 is bootstrapped by the installer itself |
 | **Your data** | `%APPDATA%\app.noema.desktop` - the database, uploads and preferences; the database URL and session secret live in `secrets.bin`, encrypted with Windows DPAPI. Uninstalling keeps it unless you tick *delete application data* |
 | **Build it** | `npm run desktop:bundle` → `src-tauri/target/release/bundle/{nsis,msi}`. Verify the SHA-256 against the release's `SHA256SUMS`; the installer is unsigned until a code-signing certificate is configured, so do not disable SmartScreen |
 | **How it boots** | The shell starts the bundled server on a free loopback port and opens the window on it. The port is a preference, not a contract: it survives a port change because nothing outside the shell depends on the number |
@@ -218,7 +243,7 @@ Transport is centralised in `src/lib/ai-provider.ts` (one place for base URL, mo
 **Clicks do nothing / “Saving…” never finishes / comments and chat appear dead.**
 These are all *Server Action* failures — the UI can't tell you, it just waits. Two known causes:
 
-1. **Origin mismatch.** Next.js only accepts a Server Action when the request's `Origin` matches the `Host`. If you reach the app through a hostname it doesn't know (a LAN IP after a rebuild, `127.0.0.1` vs `localhost`, or a reverse proxy/tunnel), every action is aborted. Noema allow-lists loopback, this machine's LAN addresses and the usual ports automatically; add anything else (proxy, tunnel) with `APP_ORIGINS`, then restart:
+1. **Origin mismatch.** Next.js only accepts a Server Action when the request's `Origin` matches the `Host`. If you reach the app through a hostname it doesn't know (a LAN IP after a rebuild, `127.0.0.1` vs `localhost`, or a reverse proxy/tunnel), every action is aborted. MVP Brain allow-lists loopback, this machine's LAN addresses and the usual ports automatically; add anything else (proxy, tunnel) with `APP_ORIGINS`, then restart:
    ```bash
    APP_ORIGINS="noema.example.com,my-tunnel.ngrok.app"
    ```
@@ -388,7 +413,7 @@ Pick a model from the curated list or press **Fetch models** to pull the provide
 
 Every provider request carries the product's own user agent (`noema/<version>`), so a provider's log says which application is talking to it. **OpenCode Go** additionally gets a stable session id (`x-opencode-session`): the discussion's own id for a chat, the workspace's id for the one-shot surfaces. Go asks its clients for exactly that — an agent that identifies itself, and a session that stays the same for a conversation.
 
-Go serves some of its models over other surfaces (Anthropic, Google, OpenAI's *Responses* API); those need a transport Noema does not speak, so the curated list holds only the models behind Go's OpenAI-compatible surface. **Fetch models** returns Go's complete list — the curated ids are the ones that work.
+Go serves some of its models over other surfaces (Anthropic, Google, OpenAI's *Responses* API); those need a transport MVP Brain does not speak, so the curated list holds only the models behind Go's OpenAI-compatible surface. **Fetch models** returns Go's complete list — the curated ids are the ones that work.
 
 A workspace's own endpoint and key are used only for requests from members of that workspace. Anyone else gets the environment configuration, so a workspace id alone never spends another workspace's key or budget.
 
@@ -608,7 +633,8 @@ Deleted pages live at `/w/<slug>/trash` (restore · delete forever · empty tras
 
 ## Notice
 
-Noema is an independent project. "Notion" is a trademark of its respective
+MVP Brain is an independent fork of Noema and is not affiliated with or
+endorsed by the Noema authors. "Notion" is a trademark of its respective
 owner and is referenced only descriptively for interoperability/education. No
 Notion source code, assets, copy or branding is included or redistributed.
 
@@ -626,10 +652,13 @@ find something worth building.
 
 ## Authors
 
-Noema is built by:
+MVP Brain is a fork of [Noema](https://github.com/Guembri01/noema), which was
+built by:
 
 - **Bilel Guembri**
 - **Wissal Ben Othmen**
+
+MVP Brain is maintained by [Mynd Palace](https://github.com/myndpalacehq).
 
 See [`AUTHORS.md`](./AUTHORS.md) for the full list, and
 [`CHANGELOG.md`](./CHANGELOG.md) for what changed when.

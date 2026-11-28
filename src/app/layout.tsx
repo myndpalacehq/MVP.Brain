@@ -19,11 +19,11 @@ import { normalizeTheme, THEME_COOKIE } from "@/lib/theme-preference";
 
 export const metadata: Metadata = {
   title: {
-    default: "Noema",
-    template: "%s · Noema",
+    default: "MVP Brain",
+    template: "%s · MVP Brain",
   },
   description:
-    "Noema is an open-source, self-hosted workspace for notes, docs and databases.",
+    "MVP Brain is an open-source, self-hosted workspace for notes, docs and databases.",
 };
 
 export default async function RootLayout({

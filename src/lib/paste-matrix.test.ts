@@ -9,7 +9,7 @@ import {
 
 /**
  * Red-first suite for the spreadsheet-paste slice (F6): clipboard text copied
- * from Excel / Google Sheets / a CSV file -> a string matrix -> a Noema table
+ * from Excel / Google Sheets / a CSV file -> a string matrix -> an MVP Brain table
  * block. The module owns the *pure* half: delimiter detection (TSV vs CSV),
  * quoted-field parsing, rectangular normalisation, header inference and the
  * matrix -> `RichNode[]` table conversion. No DOM, no React, no I/O, and every

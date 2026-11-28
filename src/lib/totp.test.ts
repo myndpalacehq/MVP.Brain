@@ -85,6 +85,6 @@ describe("otpauth url", () => {
     const url = otpauthUrl("ABCDEF", "a@b.com");
     expect(url.startsWith("otpauth://totp/")).toBe(true);
     expect(url).toContain("secret=ABCDEF");
-    expect(url).toContain("issuer=Noema");
+    expect(url).toContain("issuer=MVP+Brain");
   });
 });
